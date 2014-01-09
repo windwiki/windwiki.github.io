@@ -200,9 +200,9 @@ ul, ol, dl {
   margin-bottom: 15px
 }
 
-ul {
+ul ,li {
   list-style: inside;
-  padding-left: 700px;
+  padding-left: 300px;
 }
 
 ol {
