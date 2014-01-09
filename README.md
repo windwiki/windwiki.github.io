@@ -1,4 +1,2 @@
 
-first git pages 
-=======
-applestyle.github.io
+Myblog :http://windwiki.github.com
