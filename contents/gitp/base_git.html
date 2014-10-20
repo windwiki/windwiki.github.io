@@ -17,14 +17,14 @@
     <div>分类：<a href="index.html">Git</a></div>
     <ol class="olm">
         <li class="ft">克隆远程项目到本地</li>
-        <p>
+        <p class="make">
             <code>
             git clone                                       //复制项目
             </code>
         </p>
 
         <li class="ft">状态的查看以及代码更新的提交</li>
-        <p>
+        <p class="make">
             <code>
             git status                                               //查看状态<br/>
             git checkout .                                       //放弃所有的代码更改（从上一次提交的版本中回滚）<br/>
@@ -38,7 +38,7 @@
             </code>
         </p>
         <li class="ft">工作内容的储存（在某分支上工作到一半时，不想提交代码，但是想转移到另一个分支。）</li>
-        <p>
+        <p class="make">
             <code>
             git stash                                                //保存程序修改到git栈，但是不提交。stash以后用git status查看，工作目录下是干净的，可以切换到其它分支工作。<br/>
             git stash pop                                        //恢复上次stash（最近一次）的代码到当前分支。同时将内容从堆栈中移走。<br/>
@@ -50,7 +50,7 @@
             </code>
         </p>
         <li class="ft">分支的显示, 切换, 更新</li>
-        <p>
+        <p class="make">
             <code>
             git checkout  xx分支                            //把head指向某分支，也就是把当前的工作节点转为xx分支。所谓分支，就是状态链中的某一点。<br/>
             git pull                                                   //更新<br/>
@@ -63,7 +63,7 @@
         </p>
 
         <li class="ft">新建分支(从master拉新分支为例)</li>
-        <p>
+        <p class="make">
             <code>
             git checkout master                             //从master拉新分支要先切换到master<br/>
             git checkout - b  newbranch                //创建本地分支名为newbranch<br/>
@@ -73,7 +73,7 @@
         </p>
 
         <li class="ft">删除分支</li>
-        <p>
+        <p class="make">
             <code>
             git branch -d  xx分支                            //删除本地分支(注意删除的是已经merge的分支，对于未合并的分支是删除不掉的。强制删除用-D)<br/>
             git push origin : <远程分支>               //推送空到远程分支，即删除远程分支<br/>
@@ -84,7 +84,7 @@
         </p>
 
         <li class="ft">分支的合并</li>
-        <p>
+        <p class="make">
             以master分支合到 feature/temp_branch_20140506 分支为例<br/>
             <code>
             git checkout master                                                  //分支移动到master<br/>
@@ -97,7 +97,7 @@
             </code>
         </p>
         <li class="ft">配置全局用户名和密码</li>
-        <p>
+        <p class="make">
             <code>
             git config --global user.name "youname"<br/>
             git config --global user.email "emailname@email.com"<br/>
