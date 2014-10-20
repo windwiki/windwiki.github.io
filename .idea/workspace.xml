@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e8dae48-cd96-4cc1-8d0f-c32c2b6a539a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/javapoint1.jpeg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/index.css" afterPath="$PROJECT_DIR$/stylesheets/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/javap/javapoint.html" afterPath="$PROJECT_DIR$/contents/javap/javapoint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="windwiki.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="javapoint.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="javapoint.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contents/javap/javapoint.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.375" vertical-offset="75" max-vertical-offset="870">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.6260032" vertical-offset="210" max-vertical-offset="915">
+              <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -68,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stylesheets/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23183925" vertical-offset="0" max-vertical-offset="647">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -140,8 +138,8 @@
         <option value="$PROJECT_DIR$/contents/javap/index.html" />
         <option value="$PROJECT_DIR$/contents/dbp/index.html" />
         <option value="$PROJECT_DIR$/contents/fep/img_htm.html" />
-        <option value="$PROJECT_DIR$/contents/javap/javapoint.html" />
         <option value="$PROJECT_DIR$/stylesheets/index.css" />
+        <option value="$PROJECT_DIR$/contents/javap/javapoint.html" />
       </list>
     </option>
   </component>
@@ -610,14 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contents/fep/img_htm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="465">
-          <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/javapoint3.jpeg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -633,18 +623,26 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contents/javap/javapoint.html">
+    <entry file="file://$PROJECT_DIR$/stylesheets/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375" vertical-offset="75" max-vertical-offset="870">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stylesheets/index.css">
+    <entry file="file://$PROJECT_DIR$/contents/fep/img_htm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23183925" vertical-offset="0" max-vertical-offset="647">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="465">
+          <caret line="17" column="79" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contents/javap/javapoint.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6260032" vertical-offset="210" max-vertical-offset="915">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
           <folding />
         </state>
       </provider>
