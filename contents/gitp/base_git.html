@@ -15,12 +15,14 @@
     </p>
     <h3 class="tt">Git常用操作小结</h3>
     <ol class="olm">
-        <li>克隆远程项目到本地</li>
+        <li class="ft">克隆远程项目到本地</li>
         <p>
+            <code>
             git clone                                       //复制项目
+            </code>
         </p>
 
-        <li>状态的查看以及代码更新的提交</li>
+        <li class="ft">状态的查看以及代码更新的提交</li>
         <p>
             <code>
             git status                                               //查看状态<br/>
@@ -42,7 +44,7 @@
             git log                                                 //查看历史日志<br/>
             </code>
         </p>
-        <li>工作内容的储存（在某分支上工作到一半时，不想提交代码，但是想转移到另一个分支。）</li>
+        <li class="ft">工作内容的储存（在某分支上工作到一半时，不想提交代码，但是想转移到另一个分支。）</li>
         <p>
             <code>
             git stash                                                //保存程序修改到git栈，但是不提交。stash以后用git status查看，工作目录下是干净的，可以切换到其它分支工作。<br/>
@@ -60,7 +62,7 @@
             git stash branch feature/temp_branch_20140506  //从储藏中创建分支 feature/temp_branch_20140506<br/>
             </code>
         </p>
-        <li>分支的显示, 切换, 更新</li>
+        <li class="ft">分支的显示, 切换, 更新</li>
         <p>
             <code>
             git checkout  xx分支                            //把head指向某分支，也就是把当前的工作节点转为xx分支。所谓分支，就是状态链中的某一点。<br/>
@@ -79,7 +81,7 @@
             </code>
         </p>
 
-        <li>新建分支(从master拉新分支为例)</li>
+        <li class="ft">新建分支(从master拉新分支为例)</li>
         <p>
             <code>
             git checkout master                             //从master拉新分支要先切换到master<br/>
@@ -92,24 +94,23 @@
             </code>
         </p>
 
-        <li>删除分支</li>
+        <li class="ft">删除分支</li>
         <p>
             <code>
             git branch -d  xx分支                            //删除本地分支(注意删除的是已经merge的分支，对于未合并的分支是删除不掉的。强制删除用-D)<br/>
 
             git push origin : <远程分支>               //推送空到远程分支，即删除远程分支<br/>
 
-        ：的其它例子<br/>
+            ：的其它例子<br/>
 
-        git push origin test:master                   //提交本地分支test作为远程master分支<br/>
+            git push origin test:master                   //提交本地分支test作为远程master分支<br/>
 
-        git push origin test:test                         //提交本地test分支作为远程的test分支<br/>
+            git push origin test:test                         //提交本地test分支作为远程的test分支<br/>
             </code>
         </p>
 
-        <li>分支的合并</li>
+        <li class="ft">分支的合并</li>
         <p>
-
             以master分支合到 feature/temp_branch_20140506 分支为例<br/>
             <code>
             git checkout master                                                  //分支移动到master<br/>
@@ -127,7 +128,7 @@
             git push origin  feature/temp_branch_20140506  //推送本地分支代码到远程，完成合并操作<br/>
             </code>
         </p>
-        <li>配置全局用户名和密码</li>
+        <li class="ft">配置全局用户名和密码</li>
         <p>
             <code>
             git config --global user.name "youname"<br/>
@@ -139,7 +140,7 @@
             git config --global --list 查看上面的相关设置。<br/>
             </code>
         </p>
-        <li>参考文献</li>
+        <li class="ft">参考文献</li>
         <blockquote>
             http://git-scm.com/book .
         </blockquote>
