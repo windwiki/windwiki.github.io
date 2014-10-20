@@ -8,9 +8,9 @@ body{font: 20px/1.5 arial}
 h3 h1{margin:10px 0;}
 .tt {margin:20px;color:#ff9900;font: 15px}
 .tl {margin: 10px 30px }
-.ft{ height:4.5em; color:green }
+.ft{color:green; font-weight:bold}
 .row div {float:inherit;}
 /*
 .ft a{color:green;font-weight:bold}
 */
-.olm {padding-left: 30px}
+.olm {padding-left: 30px; padding-top:15px; padding-bottom: 30px}
