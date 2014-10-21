@@ -10,7 +10,7 @@ h3 h1 {margin: 10px 0;}
 .tl {margin: 10px 30px }
 .row div {float: inherit;}
 #list {margin: 5px 5px 5px 0px; padding: 5px;border: 1px solid darkgreen;}
-#list p {padding: 5px;border: 1px hidden ; margin: 5px,5px,15px,5px;background-color: #CFEFDF;}
+#list p {padding: 5px;border: 1px hidden ; margin: 5px,5px,25px,5px;background-color: #CFEFDF;}
 #list li {margin: 5px 5px 5px 35px; color:#ff9900; font-weight: bold}
 /*
 .ft {margin-top: 5px;color:#ff9900; font-weight: bold}
