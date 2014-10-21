@@ -2,16 +2,16 @@
 title {font: Comic Sans; padding:50%;}
 a {outline: none; text-decoration: none;}
 body {font: 20px/1.5 arial}
-.w960 {width: 800px; margin: 0 auto;}
+.box {width: 800px; margin: 0 auto;}
 .hd {margin-top: 25px;padding: 5px;border: 1px dashed #ffffff; text-align: center; background: #008000; color: #fff;}
 .h3 {float: right;}
 h3 h1 {margin: 10px 0;}
 .tt {margin-top: 10px;color: #ff9900; font: 15px}
 .tl {margin: 10px 30px }
 .row div {float: inherit;}
-#olm {padding: 5px;border: 1px solid gray;}
-#olm p {padding: 5px;border: 1px solid lightgreen; margin: 5px;background-color: #CFEFDF;}
-#olm li {margin-top: 5px;color:#ff9900; font-weight: bold}
+#list {padding: 5px;border: 1px solid gray;}
+#list p {padding: 5px;border: 1px solid lightgreen; margin: 5px;background-color: #CFEFDF;}
+#list li {margin-top: 5px;color:#ff9900; font-weight: bold}
 /*
 .ft {margin-top: 5px;color:#ff9900; font-weight: bold}
 .ft a{color:green;font-weight:bold}
