@@ -5,7 +5,7 @@ body {font: 20px/1.5 arial}
 .box {width: 720px; margin: 0 auto;}
 header.hd {margin-top: 30px;margin-bottom: 15px; padding: 5px;
     border: 1px dashed #ffffff; text-align: center; background: #008000; color: #fff;}
-header.h3 {float: right;color: #ff9900;}
+.hh3 {float: right;color: #ff9900;}
 h3 h1 {margin: 10px 0;}
 header.sh {margin-top: 10px;color: #ff9900; font: 15px}
 .row div { float: inherit;}
