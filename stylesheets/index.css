@@ -3,12 +3,11 @@ title {font: Comic Sans; padding:50%;}
 a {outline: none; text-decoration: none;}
 body {font: 20px/1.5 arial}
 .box {width: 720px; margin: 0 auto;}
-header.hd {margin-top: 30px;margin-bottom: 15px; padding: 5px;
-    border: 1px dashed #ffffff; text-align: center; background: #008000; color: #fff;}
+header.hd {margin-top: 30px;margin-bottom: 20px; padding: 5px; font-family: cursive;
+    border: 1px dashed #ffffff; text-align: center; background: #00a000; color: #fff;}
 header.sh {margin-top: 10px;color: #ff9900; font: 15px}
 header h3.hh3 {color: #ff9900;}
-header p.cat {font-size: 80%;margin-bottom: 5px;}
-h3 h1 {margin: 10px 0;}
+header p.cat {font-size: 80%;margin-bottom: 10px;}
 .row div { float: inherit;}
 .box section article#list {margin: 5px 5px 5px 0px; padding: 5px;border: 1px solid darkgreen;}
 .box section article#list ol li {margin: 5px 5px 5px 35px; color:#ff9900; font-weight: bold}
@@ -16,7 +15,9 @@ h3 h1 {margin: 10px 0;}
 footer.fc {text-align: right; font-size: 80%; margin-right: 20px;}
 footer.fr {text-align: center; font-size: 50%;margin-bottom: 10px;}
 .index {margin-left: 20px;}
+
 /*
+h3 h1 {margin: 10px 0;}
 .ft {margin-top: 5px;color:#ff9900; font-weight: bold}
 .tl {margin: 10px 30px }
 .ft a{color:green;font-weight:bold}
