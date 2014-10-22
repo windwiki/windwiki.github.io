@@ -3,11 +3,12 @@ title {font: Comic Sans; padding:50%;}
 a {outline: none; text-decoration: none;}
 body {font: 20px/1.5 arial}
 .box {width: 720px; margin: 0 auto;}
-header.hd {margin-top: 25px;padding: 5px;border: 1px dashed #ffffff; text-align: center; background: #008000; color: #fff;}
+header.hd {margin-top: 30px;margin-bottom: 15px; padding: 5px;
+    border: 1px dashed #ffffff; text-align: center; background: #008000; color: #fff;}
 header.h3 {float: right;}
 h3 h1 {margin: 10px 0;}
-section.tt {margin-top: 10px;color: #ff9900; font: 15px}
-.row div {margin-left:20px; float: inherit;}
+header.sh {margin-top: 10px;color: #ff9900; font: 15px}
+.row div { float: inherit;}
 article#list {margin: 5px 5px 5px 0px; padding: 5px;border: 1px solid darkgreen;}
 article#list li {margin: 5px 5px 5px 35px; color:#ff9900; font-weight: bold}
 article#list p {padding: 5px;border: 1px hidden ; margin: 5px,5px,25px,15px;background-color: #CFEFDF;}
