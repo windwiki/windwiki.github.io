@@ -6,12 +6,12 @@ body {font: 20px/1.5 arial}
 header.hd {margin-top: 25px;padding: 5px;border: 1px dashed #ffffff; text-align: center; background: #008000; color: #fff;}
 header.h3 {float: right;}
 h3 h1 {margin: 10px 0;}
-tt {margin-top: 10px;color: #ff9900; font: 15px}
-.row div {float: inherit;}
+section.tt {margin-top: 10px;color: #ff9900; font: 15px}
+.row div {margin-left:20px; float: inherit;}
 article#list {margin: 5px 5px 5px 0px; padding: 5px;border: 1px solid darkgreen;}
 article#list li {margin: 5px 5px 5px 35px; color:#ff9900; font-weight: bold}
 article#list p {padding: 5px;border: 1px hidden ; margin: 5px,5px,25px,15px;background-color: #CFEFDF;}
-section.ul.li, article.ul.li {margin-left: 20px;}
+
 footer.fc {text-align: right; font-size: 80%; margin-right: 20px;}
 footer.fr {text-align: center; font-size: 50%;margin-bottom: 10px;}
 
