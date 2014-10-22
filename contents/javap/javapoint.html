@@ -8,49 +8,59 @@
 <body>
 
 <div class="box">
-    <h1 class="hd" id="mark">风桔子</h1>
-    <p>
-        <em>风中飘来了桔子的香味</em>
-    </p>
-    <h3 class="tt">Java中的值传递与引用传递</h3>
-    <div>分类：<a href="index.html">Java</a></div>
-    <ol>
-        <li>说明</li>
+    <header class="hd" id="mark">
+        <h1>风桔子</h1>
         <p>
-            原始类型（int，long等）和包装类（Integer,Long等）进行参数传递时是值传递，所有函数体内针对参数的操作，都是对于拷贝的操作，不会改变本体。
+            <em>风中飘来了桔子的香味</em>
         </p>
-        <p>
-            类和容器（list,set等）作为参数时传的是引用的一个副本（注意：不是引用本身。区别于C++）。
-        </p>
-        <li>实例</li>
-        <p>
-            1）以下为原始类型和包装类作为参数时的例子。执行单元测试的结果分别为3和4。本体没有被改变。
-        </p>
-            <img src="../../images/javapoint1.jpg" alt="java code img1">
+    </header>
+    <section>
+        <header>
+            <h3 class="tt">Java中的值传递与引用传递</h3>
+            <div>分类：<a href="index.html">Java</a></div>
+        </header>
+        <article>
+            <ol>
+                <li>说明</li>
+                <p>
+                    原始类型（int，long等）和包装类（Integer,Long等）进行参数传递时是值传递，所有函数体内针对参数的操作，都是对于拷贝的操作，不会改变本体。
+                </p>
+                <p>
+                    类和容器（list,set等）作为参数时传的是引用的一个副本（注意：不是引用本身。区别于C++）。
+                </p>
+                <li>实例</li>
+                <p>
+                    1）以下为原始类型和包装类作为参数时的例子。执行单元测试的结果分别为3和4。本体没有被改变。
+                </p>
+                    <img src="../../images/javapoint1.jpg" alt="java code img1">
 
-        <p>
-            2）以下是list和array作为参数时的例子。函数体内做的变化都改变了list和array本身。结果是1和6.
-        </p>
-            <img src="../../images/javapoint2.jpeg" alt="java code img2">
+                <p>
+                    2）以下是list和array作为参数时的例子。函数体内做的变化都改变了list和array本身。结果是1和6.
+                </p>
+                    <img src="../../images/javapoint2.jpeg" alt="java code img2">
 
-        <p>
-            3) StringBuffer类作为参数时的改变情况。
-        </p>
-            <img src="../../images/javapoint3.jpeg" alt="java code img3">
+                <p>
+                    3) StringBuffer类作为参数时的改变情况。
+                </p>
+                    <img src="../../images/javapoint3.jpeg" alt="java code img3">
 
-        <p>
-        结果为：<br/>
-        AB,AB<br/>
-        AB,B<br/>
-        分析：类作为参数时，传的是引用的副本。<br/>
-        x=a, y=b 传入。<br/>
-        x.append(y)           //x指向的对象内容被改变，在尾部添加了y指向的对象内容<br/>
-        y=x    //将引用y指向引用x指向的内容，即指向a。注意，b的内容没有被改变<br/><br/>
+                <p>
+                结果为：<br/>
+                AB,AB<br/>
+                AB,B<br/>
+                分析：类作为参数时，传的是引用的副本。<br/>
+                x=a, y=b 传入。<br/>
+                x.append(y)           //x指向的对象内容被改变，在尾部添加了y指向的对象内容<br/>
+                y=x    //将引用y指向引用x指向的内容，即指向a。注意，b的内容没有被改变<br/><br/>
 
-        输出x,y的内容，即输出a指向的内容。<br/>
-        </p>
-    </ol>
-    <a href="/contents/javap/javapoint.html#mark">Back</a>
+                输出x,y的内容，即输出a指向的内容。<br/>
+                </p>
+            </ol>
+        </article>
+        <footer id="fc">
+            <a href="/contents/javap/javapoint.html#mark">Back</a>
+        </footer>
+    </section>
 </div>
 <h1></h1>
 </body>

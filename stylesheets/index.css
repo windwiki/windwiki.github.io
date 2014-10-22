@@ -11,8 +11,9 @@ h3.tt {margin-top: 10px;color: #ff9900; font: 15px}
 article#list {margin: 5px 5px 5px 0px; padding: 5px;border: 1px solid darkgreen;}
 article#list li {margin: 5px 5px 5px 35px; color:#ff9900; font-weight: bold}
 article#list p {padding: 5px;border: 1px hidden ; margin: 5px,5px,25px,15px;background-color: #CFEFDF;}
-footer.froot {text-align: center; font-size: 50%;}
-footer.fchild {text-align: right; font-size: 80%;}
+footer.fc {text-align: right; font-size: 80%; margin-right: 20px;}
+footer.fr {text-align: center; font-size: 50%;}
+
 /*
 .ft {margin-top: 5px;color:#ff9900; font-weight: bold}
 .tl {margin: 10px 30px }
