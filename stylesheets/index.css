@@ -7,12 +7,12 @@ header.hd {margin-top: 30px;margin-bottom: 15px; padding: 5px;
     border: 1px dashed #ffffff; text-align: center; background: #008000; color: #fff;}
 header.sh {margin-top: 10px;color: #ff9900; font: 15px}
 header h3.hh3 {color: #ff9900;}
-header p.cat {font-size: 50%;}
+header p.cat {font-size: 80%;margin-bottom: 5px;}
 h3 h1 {margin: 10px 0;}
 .row div { float: inherit;}
-article#list {margin: 5px 5px 5px 0px; padding: 5px;border: 1px solid darkgreen;}
-article#list li {margin: 5px 5px 5px 35px; color:#ff9900; font-weight: bold}
-article#list p {padding: 5px;border: 1px hidden ; margin: 5px,5px,25px,15px;background-color: #CFEFDF;}
+.box section article#list {margin: 5px 5px 5px 0px; padding: 5px;border: 1px solid darkgreen;}
+.box section article#list ol li {margin: 5px 5px 5px 35px; color:#ff9900; font-weight: bold}
+.box section article#list ol p {padding: 5px;border: 1px hidden ; margin: 5px,5px,25px,15px;background-color: #CFEFDF;}
 footer.fc {text-align: right; font-size: 80%; margin-right: 20px;}
 footer.fr {text-align: center; font-size: 50%;margin-bottom: 10px;}
 .index {margin-left: 20px;}
