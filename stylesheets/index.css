@@ -1,6 +1,7 @@
 *{padding: 0;margin: 0;}
 title {font: Comic Sans; padding:50%;}
-a {outline: none; text-decoration: none;color: #000000;}
+a {outline: none; text-decoration: none;}
+footer.fc a {color: #000000;}
 body {font: 20px/1.5 arial}
 .box {width: 720px; margin: 0 auto;}
 header.hd {margin-top: 30px;margin-bottom: 20px; padding: 5px; font-family: cursive;
@@ -9,7 +10,7 @@ header.sh {margin-top: 10px;color: #ff9900; font: 15px}
 header h3.hh3 {color: #ff9900;}
 header p.cat {font-size: 80%;margin-bottom: 10px;}
 .row div { float: inherit;}
-.box section article#list {margin: 5px 5px 5px 0px; padding: 8px;border: 1px solid darkgreen;}
+.box section article#list {margin: 5px 5px 5px 0px; padding: 5px;border: 1px solid darkgreen;}
 .box section article#list ol li {margin: 5px 5px 5px 35px; color:#ff9900; font-weight: bold}
 .box section article#list ol p {padding: 5px;border: 1px hidden; margin: 5px;background-color: #CFEFDF;}
 footer.fc {text-align: right; font-size: 80%; margin-right: 20px;}
