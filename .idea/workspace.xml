@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e8dae48-cd96-4cc1-8d0f-c32c2b6a539a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/gitp/base_git.html" afterPath="$PROJECT_DIR$/contents/gitp/base_git.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/fep/img_htm.html" afterPath="$PROJECT_DIR$/contents/fep/img_htm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/javap/javapoint.html" afterPath="$PROJECT_DIR$/contents/javap/javapoint.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/othersp/myblog.html" afterPath="$PROJECT_DIR$/contents/othersp/myblog.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/othersp/station.html" afterPath="$PROJECT_DIR$/contents/othersp/station.html" />
     </list>
@@ -79,11 +76,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_velocity.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="base_velocity.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contents/fep/base_velocity.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10822511" vertical-offset="0" max-vertical-offset="693">
+            <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="300">
               <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myblog.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/contents/othersp/myblog.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.58441556" vertical-offset="0" max-vertical-offset="693">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="station.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contents/othersp/station.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="660">
+              <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -104,26 +121,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-17.333334" vertical-offset="424" max-vertical-offset="1140">
               <caret line="56" column="64" selection-start-line="56" selection-start-column="64" selection-end-line="56" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contents/linuxp/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="585">
-              <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/contents/othersp/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="600">
-              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -160,11 +157,11 @@
         <option value="$PROJECT_DIR$/contents/othersp/index.html" />
         <option value="$PROJECT_DIR$/contents/javap/index.html" />
         <option value="$PROJECT_DIR$/stylesheets/index.css" />
-        <option value="$PROJECT_DIR$/contents/othersp/myblog.html" />
-        <option value="$PROJECT_DIR$/contents/othersp/station.html" />
         <option value="$PROJECT_DIR$/contents/javap/javapoint.html" />
         <option value="$PROJECT_DIR$/contents/gitp/base_git.html" />
         <option value="$PROJECT_DIR$/contents/fep/img_htm.html" />
+        <option value="$PROJECT_DIR$/contents/othersp/station.html" />
+        <option value="$PROJECT_DIR$/contents/othersp/myblog.html" />
       </list>
     </option>
   </component>
@@ -727,22 +724,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contents/othersp/myblog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.375" vertical-offset="0" max-vertical-offset="630">
-          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contents/othersp/station.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="660">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contents/othersp/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="600">
@@ -817,8 +798,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contents/fep/base_velocity.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10822511" vertical-offset="0" max-vertical-offset="693">
+        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="300">
           <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contents/othersp/station.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="660">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contents/othersp/myblog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58441556" vertical-offset="0" max-vertical-offset="693">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding />
         </state>
       </provider>
