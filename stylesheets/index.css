@@ -9,7 +9,7 @@ a {outline: none; text-decoration: none;}
 .box {width: 720px; margin: 0 auto;}
 header.hd {margin-top: 35px;margin-bottom: 20px; padding: 5px; font-family: cursive;
     border: 1px dashed #ffffff; text-align: center; background: #00a000; color: #fff;}
-header.sh {margin-top: 15px;color: #ff9900; font: 15px}
+header.sh {margin-top: 15px;color: #ff9900; font-size: 20px;font: bold;}
 header h3.hh3 {color: #ff9900;}
 header p.cat {font-size: 80%;margin-bottom: 10px;}
 .row div { float: inherit;}
@@ -27,19 +27,3 @@ footer.fr p {text-align: center; font-size: 50%;margin: 8px 0px 12px 0px;}
     border: thin gray;
 }
 #prob img {padding: 8px; width: 120px; height: 110px;}
-
-
-/*
-#igl{
-    width:1800px;
-    height:120px;
-}
-.index {margin-left: 10px;}
-#prob .leftBtn {text-align: left; display: inline; width: 30px; height: 120px;}
-#prob .rightBtn {width: 30px; height: 120px;background-image: url("/images/rihgtroll.jpg");}
-h3 h1 {margin: 10px 0;}
-.ft {margin-top: 5px;color:#ff9900; font-weight: bold}
-.tl {margin: 10px 30px }
-.ft a{color:green;font-weight:bold}
-.olm {padding-left: 35px; padding-top:5px; padding-bottom: 35px}
-*/
