@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e8dae48-cd96-4cc1-8d0f-c32c2b6a539a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/musics/swha.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/gitp/base_git.html" afterPath="$PROJECT_DIR$/contents/gitp/base_git.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/htmlp/base_velocity.html" afterPath="$PROJECT_DIR$/contents/htmlp/base_velocity.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/htmlp/img_htm.html" afterPath="$PROJECT_DIR$/contents/htmlp/img_htm.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/index.css" afterPath="$PROJECT_DIR$/stylesheets/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/cssp/index.html" afterPath="$PROJECT_DIR$/contents/cssp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/dbp/index.html" afterPath="$PROJECT_DIR$/contents/dbp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/gitp/index.html" afterPath="$PROJECT_DIR$/contents/gitp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/htmlp/index.html" afterPath="$PROJECT_DIR$/contents/htmlp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/javap/index.html" afterPath="$PROJECT_DIR$/contents/javap/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/javascripp/index.html" afterPath="$PROJECT_DIR$/contents/javascripp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/linuxp/index.html" afterPath="$PROJECT_DIR$/contents/linuxp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/othersp/index.html" afterPath="$PROJECT_DIR$/contents/othersp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/phpp/index.html" afterPath="$PROJECT_DIR$/contents/phpp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/pythonp/index.html" afterPath="$PROJECT_DIR$/contents/pythonp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/javap/javapoint.html" afterPath="$PROJECT_DIR$/contents/javap/javapoint.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/othersp/myblog.html" afterPath="$PROJECT_DIR$/contents/othersp/myblog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/othersp/station.html" afterPath="$PROJECT_DIR$/contents/othersp/station.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/othersp/test.html" afterPath="$PROJECT_DIR$/contents/othersp/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="windwiki.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,8 +28,8 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20391062" vertical-offset="169" max-vertical-offset="885">
-              <caret line="21" column="97" selection-start-line="21" selection-start-column="97" selection-end-line="21" selection-end-column="97" />
+            <state vertical-scroll-proportion="0.3924581" vertical-offset="49" max-vertical-offset="885">
+              <caret line="22" column="80" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -66,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/stylesheets/index.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -112,8 +92,8 @@
         <option value="$PROJECT_DIR$/contents/othersp/test.html" />
         <option value="$PROJECT_DIR$/contents/cssp/index.html" />
         <option value="$PROJECT_DIR$/contents/dbp/index.html" />
-        <option value="$PROJECT_DIR$/stylesheets/index.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/stylesheets/index.css" />
       </list>
     </option>
   </component>
@@ -207,24 +187,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="windwiki.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="windwiki.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -680,15 +642,15 @@
     <entry file="file://$PROJECT_DIR$/stylesheets/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20391062" vertical-offset="169" max-vertical-offset="885">
-          <caret line="21" column="97" selection-start-line="21" selection-start-column="97" selection-end-line="21" selection-end-column="97" />
+        <state vertical-scroll-proportion="0.3924581" vertical-offset="49" max-vertical-offset="885">
+          <caret line="22" column="80" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
           <folding />
         </state>
       </provider>
