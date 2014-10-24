@@ -5,7 +5,6 @@ $(document).ready(function(){
         var $pn=$(".sh p:eq(0)");
         //var pn = document.getElementsByClassName("sh")[0].getElementsByTagName('p');
         var nap = $pn.text();
-        console.log(nap);
         if(nap==="OPEN"){
             $pn.text("私の箱");
         } else {
