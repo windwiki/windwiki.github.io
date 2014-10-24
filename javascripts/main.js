@@ -5,16 +5,15 @@ $(document).ready(function(){
         var $pn=$(".sh p:eq(0)");
         //var pn = document.getElementsByClassName("sh")[0].getElementsByTagName('p');
         var nap = $pn.text();
+        var $prob = $(".prob");
         if(nap==="OPEN"){
             $pn.text("私の箱");
-            var $prob = $(".prob");
-            $prob.slideToggle("slow");
-            $prob.display("inherit");
+           // $prob.display("inherit");
         } else {
             $pn.text("OPEN");
-            $prob.slideToggle("slow");
+            //$prob.slideToggle("slow");
         }
-
+        $prob.slideToggle("slow");
     });
 });
 /*
