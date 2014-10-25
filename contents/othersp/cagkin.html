@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>change skin</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body {text-align: center;}
+        li {list-style: none;display: inline; }
+        div ul li.current {border: 3px solid black;}
+        #outer {width: 500px;margin: 0 auto;}
+        #swu li#green{background: green;}
+        #swu li#red{background: red;}
+        #swu li#yellow{background: yellow;}
+        #cau li {float: left; text-align:center;width: 80px; height: 20px; border: 1px #ffffff solid;}
+        ul {margin: 20px 0 20px 0;}
+    </style>
+    <link type="text/css" rel="stylesheet" href="../../stylesheets/test/red.css" />
+    <script>
+        window.onload = function(){
+          var btn = document.getElementById("swu").getElementsByTagName("li");
+            var oLink = document.getElementsByTagName("link")[0];
+            var colors = ["red","green",  "yellow"];
+            for(var i=0;i<btn.length;i++){
+                btn[i].index=i;
+                btn[i].onclick = function(){
+                    for(var p in btn){
+                        btn[p].className="";
+                    }
+                    this.className="current";
+                    oLink["href"]="../../stylesheets/test/"+colors[this.index]+".css";
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+<div id="outer">
+    <ul id="swu">
+        <li class="current" id="red">red</li>
+        <li id="green">green</li>
+        <li id="yellow">yellow</li>
+    </ul>
+    <ul id="cau">
+        <li>news</li>
+        <li>sports</li>
+        <li>cartoon</li>
+        <li>others</li>
+    </ul>
+</div>
+</body>
+</html>

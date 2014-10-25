@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <!--
+    <script src="../../javascripts/jquery-2.1.1.min.js"></script>
+    <script src="../../javascripts/main.js"></script>
+    <link type="text/css" rel="stylesheet" href="../../stylesheets/index.css" />-->
+    <style>
+
+        div {text-align: center; margin: 100px auto; }
+        #tb {margin: 20px auto; width: 100px; height: 100px; background: red;}
+    </style>
+    <script>
+        function changeProper(ele,proper,value){
+            ele.style[proper]=value;
+        };
+        window.onload = function(){
+            var btn = document.getElementsByTagName("input");
+            var dis = document.getElementById("tb");
+            var proper=["background","height","width","display","display"];
+            var values =["black","200px","200px","none","block"];
+            for(var i=0;i<btn.length;i++){
+                btn[i].index = i;
+                btn[i].onclick = function(){
+                   this.index==btn.length-1&&(dis.style.cssText="")
+                   console.log(this.index);
+                    changeProper(dis,proper[this.index],values[this.index]);
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="abc">
+        <input type="button" id="bla" value="beblack" />
+        <input type="button" id="higher" value="higher" />
+        <input type="button" id="wider" value="wider"/>
+        <input type="button" id="hid" value="hidden"/>
+        <input type="button" id="reset" value="reset"/>
+        <div id="tb">sdf</div>
+    </div>
+</body>
+</html>
