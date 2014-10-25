@@ -4,7 +4,6 @@
     <list default="true" id="1e8dae48-cd96-4cc1-8d0f-c32c2b6a539a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/othersp/cagkin.html" afterPath="$PROJECT_DIR$/contents/othersp/cagkin.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/othersp/cagpro.html" afterPath="$PROJECT_DIR$/contents/othersp/cagpro.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/othersp/index.html" afterPath="$PROJECT_DIR$/contents/othersp/index.html" />
     </list>
     <ignored path="windwiki.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cagpro.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="cagpro.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contents/othersp/cagpro.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.375" vertical-offset="60" max-vertical-offset="795">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="37" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.37709498" vertical-offset="0" max-vertical-offset="735">
+              <caret line="18" column="65" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -67,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cagkin.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="cagkin.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contents/othersp/cagkin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8798883" vertical-offset="0" max-vertical-offset="900">
-              <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+            <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="900">
+              <caret line="7" column="34" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -152,8 +151,8 @@
         <option value="$PROJECT_DIR$/stylesheets/test/yellow.css" />
         <option value="$PROJECT_DIR$/contents/othersp/test.html" />
         <option value="$PROJECT_DIR$/contents/othersp/index.html" />
-        <option value="$PROJECT_DIR$/contents/othersp/cagpro.html" />
         <option value="$PROJECT_DIR$/contents/othersp/cagkin.html" />
+        <option value="$PROJECT_DIR$/contents/othersp/cagpro.html" />
       </list>
     </option>
   </component>
@@ -769,18 +768,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contents/othersp/cagpro.html">
+    <entry file="file://$PROJECT_DIR$/contents/othersp/cagkin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.375" vertical-offset="60" max-vertical-offset="795">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="37" selection-end-column="9" />
+        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="900">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contents/othersp/cagkin.html">
+    <entry file="file://$PROJECT_DIR$/contents/othersp/cagpro.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8798883" vertical-offset="0" max-vertical-offset="900">
-          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.37709498" vertical-offset="0" max-vertical-offset="735">
+          <caret line="18" column="65" selection-start-line="18" selection-start-column="65" selection-end-line="18" selection-end-column="65" />
           <folding />
         </state>
       </provider>
