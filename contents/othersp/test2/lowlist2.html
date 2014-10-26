@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>風子の空</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body {text-align: center;}
+        header {margin: 10px 0 10px 0;}
+        a {text-decoration: none; color: black;}
+        li:hover {background: yellowgreen;}
+        h2 {margin: 0 auto;text-align:left;font-size: 18px;line-height: 35px;
+            width: 200px;height: 35px;background: grey;border: solid 1px black;
+            background: url("../../../images/test/nav.jpeg") no-repeat right;;
+        }
+        #outer {text-align: left;}
+        #outer li {margin: 0 auto; list-style-type: none; width: 200px; height: 35px;line-height: 35px;border: solid 1px black;}
+        label.swap h2 {background-position: -180px -10px;}
+    </style>
+    <script>
+        window.onload = function(){
+            var din = document.getElementsByTagName("h2")[0];
+            var out = document.getElementById("out");
+            var outer = document.getElementById("outer");
+            out.onmouseover = function(){
+                outer.style.display = "block";
+                din.className = "swap";
+            };
+            out.onmouseout = function(){
+                outer.style.display = "none";
+                din.className = "";
+            };
+        };
+    </script>
+</head>
+<body>
+<header>
+    <h3>下拉列表2</h3>
+    <a href="../test.html">返回</a>
+</header>
+<div id="out">
+    <label><h2>下拉列表2</h2></label>
+    <div id="outer">
+        <ul>
+            <li><a href="javascript:;">选项A</a></li>
+            <li><a href="javascript:;">选项B</a></li>
+            <li><a href="javascript:;">选项A</a></li>
+            <li><a href="javascript:;">选项B</a></li>
+            <li><a href="javascript:;">选项A</a></li>
+            <li><a href="javascript:;">选项B</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
