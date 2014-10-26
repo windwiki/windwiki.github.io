@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>風子の空</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body {text-align: center;}
+        header {margin: 10px 0 10px 0;}
+
+        #outer {text-align: center;}
+        .input {margin-bottom: 10px;}
+        #outer div {
+            width: 100px; height: 100px;background: green;
+            margin: 10px auto;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var set = document.getElementById("set");
+            var reset = document.getElementById("reset");
+            var inp = document.getElementsByClassName("input");
+            var sut = document.getElementById("outer").getElementsByTagName("div")[0];
+
+            set.onclick =  function(){
+                sut.style[inp[0].value]=inp[1].value;
+            };
+            reset.onclick =  function(){
+                sut.removeAttribute("style");
+                inp[0].value="background";
+                inp[1].value="green";
+            };
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h3>设置属性</h3>
+    <a href="../test.html">返回</a>
+</header>
+<div id="outer">
+    属性<input class="input" type="text" value="background"/><br/>
+    赋值<input class="input" type="text" value="red"/><br/>
+    <input id="set" type="button" value="set"/>
+    <input id="reset" type="button" value="reset"/>
+    <div>
+
+    </div>
+</div>
+</body>
+</html>
