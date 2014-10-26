@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>風子の空</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body {text-align: center;}
+        header {margin: 10px 0 10px 0;}
+
+        #outer {text-align: center;}
+        #outer #arr {margin: 10px auto; width: 200px; height: 20px;}
+        #outer #sum {margin-top: 20px;}
+    </style>
+    <script>
+        window.onload = function(){
+            var din = document.getElementById("arr");
+            var btn = document.getElementById("btn");
+            var sut = document.getElementById("sum");
+            din.onkeyup = function(){
+                this.value = this.value.replace(/[^(\d)|(,)]/,"");
+            }
+            btn.onclick =  function(){
+                var values = din.value.split(',');
+                //console.log(values);
+                var sum = 0;
+                for(var i=0;i<values.length;i++){
+                    sum+=parseInt(values[i]);
+                }
+                sut.innerHTML=sum;
+            };
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h3>下拉列表</h3>
+    <a href="../test.html">返回</a>
+</header>
+<div id="outer">
+    <input id="arr" type="text" value="1,2,3"/><br/>
+    <input id="btn" type="button" value="opt"/><br/>
+    <p id="sum"></p>
+</div>
+</body>
+</html>

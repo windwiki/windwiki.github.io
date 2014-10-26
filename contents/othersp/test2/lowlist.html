@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>風子の空</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body {text-align: center;}
+        header {margin: 10px 0 10px 0;}
+        a {text-decoration: none; color: black;}
+        input {margin: 0 auto;width: 100px;}
+        #outer {text-align: center;}
+        #outer li {margin: 0 auto; list-style-type: none; width: 100px; height: 20px;border: solid 1px black;}
+    </style>
+    <script>
+        window.onload = function(){
+            var din = document.getElementById("outer");
+            var btn = document.getElementById("btn");
+            var close = document.getElementById("close");
+            btn.onclick = function(){
+                din.style.display = (din.style.display==="none"?"block":"none");
+            };
+            close.onclick = function(){
+                din.style.display="none";
+            }
+
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h3>下拉列表</h3>
+    <a href="../test.html">返回</a>
+</header>
+<input id="btn" type="button" value="change"/>
+<div id="outer">
+    <ul>
+        <li><a href="javascript:;">选项A</a></li>
+        <li><a href="javascript:;">选项B</a></li>
+        <li id="close"><a href="javascript:;">关闭</a></li>
+    </ul>
+</div>
+</body>
+</html>

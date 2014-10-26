@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>風子の空</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body {text-align: center;}
+        header {margin: 10px 0 10px 0;}
+
+        #outer {text-align: center;}
+        #outer div {margin: 10px auto; width: 200px; height: 40px;border: solid 1px black;}
+    </style>
+    <script>
+        window.onload = function(){
+            var din = document.getElementById("outer");
+            var els = din.getElementsByTagName("div");
+            din.onclick =  function(e){
+
+                var e = e||window.event;
+                var target = e.target;
+               // console.log(target);
+                for(var i=0;i<els.length;i++){
+                    if(els[i]===target){
+                        alert(target.innerHTML);
+                    }
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h3>下拉列表</h3>
+    <a href="../test.html">返回</a>
+</header>
+<div id="outer">
+    <div>如果这都不是爱1<strong>abc</strong></div>
+    <div>如果这都不是爱2<strong>abc</strong></div>
+    <div>如果这都不是爱3<strong>abc</strong></div>
+    <div>如果这都不是爱4<strong>abc</strong></div>
+</div>
+</body>
+</html>
