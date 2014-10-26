@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>風子の空</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body {text-align: center;}
+        header {margin: 20px 0 20px 0;}
+        #layer {position:absolute; top:0;left:0;background: grey;width:100%;height:100%;margin: 0;opacity: 0.2;filter:alpha(opacity=50);display: none;}
+        #outer h2 {width: 250px; height:18px;background: green;;}
+        #outer {margin:0 auto;text-align: center;width: 250px;height: 200px;background: lightgreen;display: none;}
+        h2 span {font-size:15pt;cursor:pointer;float: right;}
+
+    </style>
+    <script>
+        window.onload = function(){
+            var layer = document.getElementById("layer");
+            var outer = document.getElementById("outer");
+            var btn = document.getElementsByTagName("input")[0];
+            var close = document.getElementById("clo");
+            btn.onclick =  function(){
+                layer.style.display="block";
+                outer.style.display="block";
+            };
+            close.onclick = function(){
+                console.log(close);
+                layer.style.display="none";
+                outer.style.display="none";
+            };
+        };
+    </script>
+</head>
+<body>
+<div id="layer"></div>
+<header>
+    <h3>Pop div</h3>
+    <!--<a href="../test.html">return </a>-->
+</header>
+
+<input type="button" value="pop"/>
+
+<div id="outer">
+    <h2><span id="clo">x</span></h2>
+</div>
+</body>
+</html>
