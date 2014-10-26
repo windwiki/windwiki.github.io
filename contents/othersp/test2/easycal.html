@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>風子の空</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body {text-align: center;}
+        header {margin: 10px 0 10px 0;}
+
+        #tab {margin: 0 auto; width:150px;height:150px;background: grey;}
+        #tab li{float:left;height:45px;width:45px;margin:2px;line-height:45px;background:green; font-size:20px;cursor:pointer; list-style-type: none;}
+        #content{margin: 0 auto; width: 150px; height:100px;border: solid 1px black;}
+        #te {margin-top: 20px;}
+    </style>
+    <script>
+        window.onload = function(){
+            var tab = document.getElementById("tab");
+            var els = tab.getElementsByTagName("li");
+            var content = document.getElementById("te");
+            var cv = ["1号","2号","3号","4号","5号","6号","7号","8号","9号"];
+            tab.onmouseover =  function(e){
+
+                var e = e||window.event;
+                var target = e.target;
+                for(var i=0;i<els.length;i++){
+                    content.innerHTML = "";
+                    els[i].style.background="green";
+                }
+                for(var i=0;i<els.length;i++){
+
+                    if(els[i]===target){
+                        console.log(els[i].value+" "+target.value+" "+i);
+                        content.innerHTML = cv[i];
+                        target.style.background="red";
+                    }
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+<header>
+    <h3>简易日历</h3>
+    <a href="../test.html">返回</a>
+</header>
+<div id="tab">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+</div>
+<div id="content">
+    <p id="te"></p>
+</div>
+</body>
+</html>

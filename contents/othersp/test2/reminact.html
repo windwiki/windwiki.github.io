@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>風子の空</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body {text-align: center;}
+        header {margin: 10px 0 10px 0;}
+        .igs {margin:0 auto;padding:5px;width: 560px;height: 225px;border: 1px solid black;}
+        .igs li {
+            position: relative;float:left;margin:5px;cursor:pointer;display:inline;width:100px; height:100px;
+            border: 1px solid black; list-style-type: none;line-height: 100px;}
+        .igs img {position:absolute;width:110px; height:110px;border: 2px solid black; display: none;}
+        .igs .current img{opacity: 1;}
+    </style>
+    <script>
+        window.onload = function(){
+              var igs = document.getElementsByClassName("igs")[0];
+              var ops = igs.getElementsByTagName("p");
+              var ogs = igs.getElementsByTagName("img");
+            igs.onmouseover = function(e){
+                var e=e||window.event;
+                var target= e.target;
+                console.log(target);
+                for(var i=0;i<ogs.length;i++){
+                    if(ops[i]===target){
+                        ogs[i].style.display="block";
+                        ops[i].style.display="none";
+                    }
+                }
+            };
+            igs.onmouseout = function(e){
+                var e=e||window.event;
+                var target= e.target;
+                console.log(target);
+                for(var i=0;i<ogs.length;i++){
+                    if(ops[i]===target){
+                        ogs[i].style.display="none";
+                        ops[i].style.display="block";
+                    }
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+<header>
+    <h3>提示框效果</h3>
+    <a href="../test.html">返回</a>
+</header>
+<div class="igs">
+    <li><p>javascript</p><img src="../../../images/index/javascrip4.png" alt="JavaScript"/></li>
+    <li><p>HTML</p><img src="../../../images/index/htmlimg.jpeg" alt="HTML"/></li>
+    <li><p>CSS</p><img src="../../../images/index/cssimg.jpeg" alt="CSS"/></li>
+    <li><p>Git</p><img src="../../../images/index/gitimg1.jpg" alt="Git"/></li>
+    <li><p>Java</p><img src="../../../images/index/javaimg.jpeg" alt="Java"/></li>
+    <li><p>Linux</p><img src="../../../images/index/linuximg1.jpeg" alt="Linux"/></li>
+    <li><p>Python</p><img src="../../../images/index/python.jpeg" alt="Python"/></li>
+    <li><p>DataBase</p><img src="../../../images/index/dabase3.jpeg" alt="DataBase"/></li>
+    <li><p>PHP</p><img src="../../../images/index/phpimg.jpeg" alt="PHP"/></li>
+    <li><p>Web</p><img src="../../../images/index/webimg3.jpeg" alt="Web"/></li>
+</div>
+</body>
+</html>

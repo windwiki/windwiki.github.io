@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>風子の空</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body {text-align: center;}
+        header {margin: 10px 0 10px 0;}
+        .igs {margin:0 auto;padding:5px;width: 530px;height: 205px;border: 1px solid black;}
+        .igs li {display:inline; list-style-type: none;}
+        .igs li img {width:100px; height:100px;opacity: 0.3;border: 1px solid black;}
+        .igs .current img{opacity: 1;}
+    </style>
+    <script>
+        window.onload = function(){
+            var igs = document.getElementsByClassName("igs")[0];
+            var els = igs.getElementsByTagName("li");
+            /*
+            for(var i=0;i<els.length;i++){
+                els[i].onmouseover = function(){
+                    console.log(this);
+                    this.className="current";
+                }
+                els[i].onmouseout = function(){
+                    this.className = "";
+                }
+            }
+            */
+
+            igs.onmouseover =  function(e){
+                var e = e||window.event;
+                var target = e.target;
+               // console.log(target);
+                for(var i=0;i<els.length;i++){
+                    if(els[i].getElementsByTagName("img")[0]===target){
+                        els[i].className="current";
+                    }
+                }
+            };
+            igs.onmouseout = function(e){
+                var e = e||window.event;
+                var target = e.target;
+                for(var i=0;i<els.length;i++){
+                    if(els[i].getElementsByTagName("img")[0]===target){
+                        els[i].className="";
+                    }
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+<header>
+    <h3>模糊透明图片</h3>
+    <a href="../test.html">返回</a>
+</header>
+<div class="igs">
+    <li class ><img src="../../../images/index/javascrip4.png" alt="JavaScript"/></li>
+    <li class ><img src="../../../images/index/htmlimg.jpeg" alt="HTML"/></li>
+    <li class ><img src="../../../images/index/cssimg.jpeg" alt="CSS"/></li>
+    <li class ><img src="../../../images/index/gitimg1.jpg" alt="Git"/></li>
+    <li class ><img src="../../../images/index/javaimg.jpeg" alt="Java"/></li>
+    <li class ><img src="../../../images/index/linuximg1.jpeg" alt="Linux"/></li>
+    <li class ><img src="../../../images/index/python.jpeg" alt="Python"/></li>
+    <li class ><img src="../../../images/index/dabase3.jpeg" alt="DataBase"/></li>
+    <li class ><img src="../../../images/index/phpimg.jpeg" alt="PHP"/></li>
+    <li class ><img src="../../../images/index/webimg3.jpeg" alt="Web"/></li>
+</div>
+</body>
+</html>

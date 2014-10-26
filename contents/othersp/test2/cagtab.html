@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>風子の空</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body {text-align: center;}
+        header {margin: 10px 0 10px 0;}
+
+        #tab {margin: 0 auto; width:300px;height:30px;background: black;border: solid 1px black;color: #ffffff;}
+        #tab li{float:left;height:30px;line-height:30px;cursor:pointer; list-style-type: none;padding: 0 20px;}
+        #content{margin: 0 auto; width: 300px; height:200px;border: solid 1px black;}
+        #content ul{margin-top:20px;float: left;}
+        #content li{margin:0 20px;}
+    </style>
+    <script>
+        window.onload = function(){
+            var din = document.getElementById("tab");
+            var els = din.getElementsByTagName("li");
+            var content = document.getElementById("content");
+            var cs = content.getElementsByTagName("ul");
+            din.onmouseover =  function(e){
+
+                var e = e||window.event;
+                var target = e.target;
+                // console.log(target);
+
+                for(var i=0;i<els.length;i++){
+                    if(els[i]===target){
+                        //console.log(els[i]);
+                        els[i].style.background="red";
+                        cs[i].style.display="block";
+                    } else {
+                        els[i].style.background="black";
+                        cs[i].style.display="none";
+                    }
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+<header>
+    <h3>改变选项卡</h3>
+    <a href="../test.html">返回</a>
+</header>
+<div id="tab">
+    <ul>
+        <li>体育</li>
+        <li>新闻</li>
+        <li>物理</li>
+    </ul>
+</div>
+<div id="content">
+        <ul>
+            <li>体育</li>
+            <li>体育</li>
+            <li>体育</li>
+        </ul>
+        <ul>
+            <li>新闻</li>
+            <li>新闻</li>
+            <li>新闻</li>
+        </ul>
+        <ul>
+            <li>物理</li>
+            <li>物理</li>
+            <li>物理</li>
+        </ul>
+</div>
+</body>
+</html>

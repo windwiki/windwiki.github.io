@@ -25,7 +25,9 @@
                 //console.log(values);
                 var sum = 0;
                 for(var i=0;i<values.length;i++){
-                    sum+=parseInt(values[i]);
+                    if(values[i]!='') {
+                        sum += parseInt(values[i]);
+                    }
                 }
                 sut.innerHTML=sum;
             };
