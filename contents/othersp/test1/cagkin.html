@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>風子の空</title>
+    <style>
+        *{margin: 10; padding: 0;}
+        body {text-align: center;}
+        li {list-style: none;display: inline; }
+        div ul li.current {border: 3px solid black;}
+        #outer {width: 500px;margin: 0 auto;}
+        #swu li#green{background: green;}
+        #swu li#red{background: red;}
+        #swu li#yellow{background: yellow;}
+        #cau li {float: left; text-align:center;width: 80px; height: 20px; border: 1px #ffffff solid;}
+        ul {margin: 20px 0 20px 0;}
+    </style>
+    <link type="text/css" rel="stylesheet" href="../../../stylesheets/test/red.css" />
+    <script>
+        window.onload = function(){
+
+            var swu = document.getElementById("swu");
+            swu.onclick = function(e){
+                var e = e||window.event;
+                var target = e.target;
+                var colors = ["red","green","yellow"];
+                var oLink = document.getElementsByTagName("link")[0];
+                var btn = swu.getElementsByTagName("li");
+                if(target.nodeName.toLowerCase()==="li"){
+                       for(var i=0;i<btn.length;i++){
+                           if(btn[i]===target){
+                               target.className="current";
+                               oLink["href"]="../../../stylesheets/test/"+colors[i]+".css";
+                           } else {
+                               btn[i].className="";
+                           }
+                       }
+                }
+            }
+            /*
+            for(var i=0;i<btn.length;i++){
+                btn[i].index=i;
+                btn[i].onclick = function(){
+                    /**
+                     * 1.循环赋值
+                     */
+//                    for(var p in btn){
+//                        btn[p].className="";
+//                    }
+                    /**
+                     * 2.先查找再赋值
+
+                    var nb = document.getElementsByClassName("current")[0];
+                    nb.className="";
+
+                    this.className="current";
+                    oLink["href"]="../../stylesheets/test/"+colors[this.index]+".css";
+                }
+
+            }*/
+        };
+    </script>
+</head>
+<body>
+<header>
+    <h3>网页换肤</h3>
+    <a href="../test.html">返回</a>
+</header>
+<div id="outer">
+    <ul id="swu">
+        <li class="current" id="red">red</li>
+        <li id="green">green</li>
+        <li id="yellow">yellow</li>
+    </ul>
+    <ul id="cau">
+        <li>news</li>
+        <li>sports</li>
+        <li>cartoon</li>
+        <li>others</li>
+    </ul>
+</div>
+
+</body>
+</html>

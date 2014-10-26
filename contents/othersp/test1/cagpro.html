@@ -20,7 +20,7 @@
             for(var i=0;i<btn.length;i++){
                 btn[i].index = i;
                 btn[i].onclick = function(){
-                   this.index==btn.length-1&&(dis.style.cssText="")
+                   this.index==btn.length-1&&(dis.style.cssText="");
                    console.log(this.index);
                     changeProper(dis,proper[this.index],values[this.index]);
                 }
@@ -31,6 +31,7 @@
 <body>
 <header>
     <h3>控制属性</h3>
+    <a href="../test.html">返回</a>
 </header>
     <div class="abc">
         <input type="button" id="bla" value="beblack" />
@@ -41,7 +42,7 @@
         <div id="tb">sdf</div>
     </div>
 <footer>
-    <a href="../../contents/othersp/test.html">返回</a>
+    <a href="../test.html">返回</a>
 </footer>
 </body>
 </html>

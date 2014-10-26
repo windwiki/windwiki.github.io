@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>風子の空</title>
+    <style>
+        body{text-align: center;}
+        #remind {display:none; margin: 0 auto; width: 100px; height: 50px;background: gainsboro;}
+    </style>
+    <script>
+        window.onload = function(){
+            var mon = document.getElementsByTagName("label")[0];
+            var inp = document.getElementById("remind");
+            mon.onmouseover = function(){
+                inp.style.display="block";
+            }
+            mon.onmouseout = function(){
+                inp.style.display="none";;
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h3>提示框</h3>
+    <a href="../test.html">返回</a>
+</header>
+<label>
+    <input type="checkbox"/>提示框
+</label>
+<div id="remind">
+    提示
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>風子の空</title>
+    <style>
+        div {margin: 0 auto;width: 100px; height: 100px;background: red;}
+        div.col {background: green;}
+    </style>
+    <script>
+        window.onload = function(){
+            var inp = document.getElementsByTagName("div")[0];
+            inp.onmouseover = function(){
+                //inp.style.background="green"; //直接设置
+                inp.className="col";  //通过改变类名设置
+            }
+            inp.onmouseout = function(){
+                //inp.style.background="red";
+                inp.className="";
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h3>鼠标移动触发</h3>
+    <a href="../test.html">返回</a>
+</header>
+<div class="col">
+</div>
+</body>
+</html>
