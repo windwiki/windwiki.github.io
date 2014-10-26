@@ -22,8 +22,10 @@ header p.cat {font-size: 80%;margin-bottom: 10px;}
 .box section article#list ol p {padding: 5px;border: 1px hidden; margin: 5px;background-color: #CFEFDF;}
 footer {text-align: center; }
 footer.fr p {font-size: 50%;margin: 8px 0px 12px 0px;}
+footer.fr {clear: both;}
 .prob img {padding: 8px; width: 120px; height: 110px;}
 .prob{ width:720px; overflow:hidden;
     height:280px; border: thin gray;display: none;}
-
+.test {float: left;}
+.test li {margin-top: 15px;}
 /**{padding: 0;margin: 0;}*/

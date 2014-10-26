@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e8dae48-cd96-4cc1-8d0f-c32c2b6a539a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contents/othersp/test2/cagtab.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contents/othersp/test2/easycal.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contents/othersp/test2/imgopalist.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/contents/othersp/test2/reminact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/othersp/test2/arrsum.html" afterPath="$PROJECT_DIR$/contents/othersp/test2/arrsum.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/index.css" afterPath="$PROJECT_DIR$/stylesheets/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contents/othersp/test.html" afterPath="$PROJECT_DIR$/contents/othersp/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="windwiki.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,8 +69,18 @@
       <file leaf-file-name="easycal.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contents/othersp/test2/easycal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="1035">
-              <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+            <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="1035">
+              <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/contents/phpp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="585">
+              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -85,8 +89,8 @@
       <file leaf-file-name="test.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contents/othersp/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75418997" vertical-offset="0" max-vertical-offset="825">
-              <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.81703913" vertical-offset="135" max-vertical-offset="885">
+              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -95,8 +99,8 @@
       <file leaf-file-name="index.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stylesheets/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-              <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+              <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -159,11 +163,11 @@
         <option value="$PROJECT_DIR$/contents/othersp/test2/jumpout.html" />
         <option value="$PROJECT_DIR$/contents/othersp/test2/setpro.html" />
         <option value="$PROJECT_DIR$/contents/othersp/test2/arrsum.html" />
-        <option value="$PROJECT_DIR$/stylesheets/index.css" />
         <option value="$PROJECT_DIR$/contents/othersp/test2/imgopalist.html" />
         <option value="$PROJECT_DIR$/contents/othersp/test2/cagtab.html" />
         <option value="$PROJECT_DIR$/contents/othersp/test2/easycal.html" />
         <option value="$PROJECT_DIR$/contents/othersp/test2/reminact.html" />
+        <option value="$PROJECT_DIR$/stylesheets/index.css" />
         <option value="$PROJECT_DIR$/contents/othersp/test.html" />
       </list>
     </option>
@@ -618,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contents/phpp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.25" vertical-offset="27" max-vertical-offset="585">
-          <caret line="23" column="10" selection-start-line="22" selection-start-column="18" selection-end-line="23" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/index/webim.jpeg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -779,14 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stylesheets/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/contents/othersp/test2/divinht.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33519554" vertical-offset="0" max-vertical-offset="735">
@@ -799,14 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="1170">
           <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/contents/othersp/test2/easycal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="1035">
-          <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -827,10 +808,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/contents/othersp/test2/easycal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="1035">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contents/phpp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="585">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylesheets/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="36" selection-end-line="26" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/contents/othersp/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75418997" vertical-offset="0" max-vertical-offset="825">
-          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.81703913" vertical-offset="135" max-vertical-offset="885">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
           <folding />
         </state>
       </provider>
