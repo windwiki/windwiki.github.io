@@ -15,11 +15,14 @@
         span {line-height:80px;padding:0px 15px; margin:0 8px; border: 1px solid black;background: wheat;}
     </style>
     <script>
+        function format(num){
+            return num.toString().replace(/^(\d)$/,"0$1");
+        }
         function setTime(spans){
             var date = new Date();
             var tis = [date.getHours(),date.getMinutes(),date.getSeconds()];
             for(var i=0;i<spans.length;i++){
-                spans[i].innerHTML=tis[i];
+                spans[i].innerHTML=format(tis[i]);
             }
         }
         window.onload = function(){
