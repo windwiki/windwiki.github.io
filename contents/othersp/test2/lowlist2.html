@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset=utf-8" />
     <title>風子の空</title>
     <style>
         *{padding: 0;margin: 0;}
@@ -22,11 +22,11 @@
             var din = document.getElementsByTagName("h2")[0];
             var out = document.getElementById("out");
             var outer = document.getElementById("outer");
-            out.onmouseover = function(){
+            din.click = function(){
                 outer.style.display = "block";
                 din.className = "swap";
             };
-            out.onmouseout = function(){
+            din.click = function(){
                 outer.style.display = "none";
                 din.className = "";
             };
