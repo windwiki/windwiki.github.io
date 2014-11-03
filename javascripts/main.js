@@ -14,7 +14,9 @@ function toggle(event){
 
     if (nap === "OPEN") {
         pn.text("私の箱");
-        localStorage.setItem("open", "true");
+        if(window.localStorage) {
+            localStorage.setItem("open", "true");
+        }
         // $prob.display("inherit");
     } else {
         pn.text("OPEN");
@@ -22,14 +24,17 @@ function toggle(event){
     }
     $prob.slideToggle("slow");
 };
-function checkLocalStorage(pn){
-    var status = localStorage.getItem("open");
-    if(status&&status==="true"){
-       // var $pn=$(".sh p:eq(0)");
-        pn.text("私の箱");
-        var $prob = $(".prob");
-        //var prob = document.getElementsByClassName("prob")[0];
-        $prob.css("display","block");
+function checkLocalStorage(pn) {
+    if (window.localStorage) {
+        console.log("yes");
+        var status = localStorage.getItem("open");
+        if (status && status === "true") {
+            // var $pn=$(".sh p:eq(0)");
+            pn.text("私の箱");
+            var $prob = $(".prob");
+            //var prob = document.getElementsByClassName("prob")[0];
+            $prob.css("display", "block");
+        }
     }
 }
 function addLoadEvent(func){
