@@ -15,6 +15,7 @@
         p {margin: 5px 0 0 5px; width: 450px;height: 30px;background-color: lightgreen;line-height: 30px;padding-left: 10px;}
 
     </style>
+    <script src="../../../javascripts/tool.js"></script>
     <script>
         var obj = {
             "key":"key",
@@ -35,13 +36,13 @@
                 this.value = value;
             }
         };
-        window.onload = function(){
+        document.ready(function(){
             var btn = document.getElementById("btn");
             var clear = document.getElementById("clear");
             showPdoms();
             btn.onclick = addToDOM;
             clear.onclick = clearSto;
-        };
+        });
 
         function showPdoms(){
             var pstr = localStorage.getItem("lots");
