@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    /*
+    在IE6里面，父容器是需要设置一个“width”和“height”。因为高度可能是一个变量，宽度为100%，他们将能正常的工作。使用“overflow:auto;”,
+    在IE浏览器中会给元素添加滚动条，这样一来，最好是直接使用“overflow:hidden;”来清除浮动。
+
+    .box-set {
+        background: #e8eae9;
+        overflow: auto;
+    }
+    .box {
+        background: #8ec63f;
+        height: 100px;
+        float: left;
+        margin: 10px;
+        width: 200px;
+    }*/
+    .group:before,
+    .group:after {
+        content: "";
+        display: table;
+    }
+    .group:after {
+        clear: both;
+    }
+    .group {
+        *zoom: 1;
+    }
+    .box {
+        background: #8ec63f;
+        height: 100px;
+        float: left;
+        margin: 10px;
+        width: 200px;
+    }
+</style>
+<body>
+<div class="group">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+</div>
+
+</body>
+</html>

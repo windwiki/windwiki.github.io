@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    .box-set {
+        background: #e8eae9;
+        height: 200px;
+        position: relative;
+    }
+    .box {
+        background: #8ec63f;
+        height: 80px;
+        position: absolute;/*absolute相对于父元素，浮动于上方。fixed：相对于浏览器，不随页面滚动。*/
+        width: 80px;
+    }
+    .box-1 {
+        top: 6%;
+        left: 2%;
+    }
+    .box-2 {
+        top: 0;
+        right: -40px;
+    }
+    .box-3 {
+        bottom: -10px;
+        right: 20px;
+    }
+    .box-4 {
+        bottom: 0;
+    }
+</style>
+<body>
+<div class="box-set">
+    <div class="box box-1">Box 1</div>
+    <div class="box box-2">Box 2</div>
+    <div class="box box-3">Box 3</div>
+    <div class="box box-4">Box 4</div>
+</div>
+</body>
+</html>

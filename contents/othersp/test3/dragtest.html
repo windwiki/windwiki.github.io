@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    *{padding: 0;margin: 0;}
+    header {margin-top: 20px;}
+    body {text-align: center;}
+    #target {margin:20px auto; width: 50px;height: 50px;background: red; }
+
+</style>
+<script>
+    window.onload = function(){
+        var tar = document.getElementById("target");
+        //var disx= 0;var disy=0;
+        //var opos = [{x:tar.offsetLeft,y:tar.offsetTop}];
+        tar.ondragstart = function(event){
+            event.dataTransfer.setData("text/plain","drag test");
+
+        };
+        document.ondragover = function(event){
+            return false;
+        };
+        document.ondrop = function(event) {
+            tar.style.position = "absolute";
+            tar.style.left = event.pageX+"px";
+            tar.style.top = event.pageY + "px";
+            return false;
+        }
+    }
+</script>
+<body>
+<header>
+    <h3>拖放（待调整）</h3>
+    <a href="../test.html">返回</a>
+</header>
+<div id="target" draggable="true"></div>
+</body>
+</html>
