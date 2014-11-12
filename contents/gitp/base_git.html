@@ -6,7 +6,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <style>
-        h1,
         h2,
         h3,
         h4,
@@ -50,7 +49,6 @@
         p {
             margin-bottom: 9px;
         }
-        h1,
         h2,
         h3,
         h4,
@@ -58,10 +56,6 @@
         h6 {
             color: #404040;
             line-height: 36px;
-        }
-        h1 {
-            margin-bottom: 18px;
-            font-size: 30px;
         }
         h2 {
             font-size: 24px;
@@ -146,7 +140,7 @@
             }
         }
         @media print {
-            body,code,pre code,h1,h2,h3,h4,h5,h6 {
+            body,code,pre code,h2,h3,h4,h5,h6 {
                 color: black;
             }
             table, pre {
@@ -154,6 +148,8 @@
             }
         }
         li {margin-left: 20px;font-size: 0.8em;}
+        h3.hh3{font-size: 1.2em;}
+
     </style>
     <link rel="stylesheet" href="../../stylesheets/index.css">
 </head>
@@ -163,8 +159,9 @@
         <header class="hd" id="mark">
             <h1>風子の空</h1>
         </header>
+
         <header>
-            <h2 class="hh2">Git常用操作小结</h2>
+            <h3 class="hh3">Git常用操作小结</h3>
             <p class="cat">分类：<a href="index.html">Git</a></p>
         </header>
 
@@ -385,18 +382,17 @@
 
     <pre><code>  git config --global --list 查看上面的相关设置。
     </code></pre></li>
+
+            <h4>参考文献</h4>
+
+    <li>[gitbook]：<a href="http://git-scm.com/book">http://git-scm.com/book</a>
+        <footer class="fc">
+            <a href="/contents/gitp/base_git.html#mark">返回</a>
+        </footer></li>
         </ul>
 
 
-    <hr />
-
-    <p> ####参考文献</p>
-
-    <p> [gitbook]：<a href="http://git-scm.com/book">http://git-scm.com/book</a>
-        <footer class="fc">
-            <a href="/contents/gitp/base_git.html#mark">返回</a>
-        </footer></p>
-
+        <hr />
     </div>
 </body>
 </html>
