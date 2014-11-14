@@ -1,0 +1,58 @@
+<DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>風子の空</title>
+        <style>
+            body {}
+            header{margin:20px 0 20px 0 ;text-align: center;}
+            div {margin:auto auto; width: 600px;height: 1000px;}
+            div ul{float: left;}/*消除塌陷*/
+            div p {position: absolute;top: 0;left: 0;margin:0;}
+            div li {padding:15px;list-style-type:none;float:left;margin:25px;border: solid green 1px;}/*float不继承*/
+            div li img {width: 180px;height: 110px;}
+            div li:nth-child(1){-moz-transform:matrix(1,0,1,1,0,1);-webkit-transform:matrix(1,0,1,1,0,1);-o-transform:matrix(1,0,1,1,0,1);-ms-transform:matrix(1,0,1,1,0,1);transform:matrix(1,0,1,1,0,1);}
+            div li:nth-child(2){-moz-transform:translate(5%,10px);-webkit-transform:translate(10px,10px);-o-transform:translate(10px,10px);-ms-transform:translate(10px,10px);transform:translate(10px,10px);}
+
+            div li:nth-child(3){-moz-transform:translateX(20px);-webkit-transform:translateX(20px);-o-transform:translateX(20px);-ms-transform:translateX(20px);transform:translateX(20px);}
+            div li:nth-child(4){-moz-transform:translateY(20px);-webkit-transform:translateY(20px);-o-transform:translateY(20px);-ms-transform:translateY(20px);transform:translateY(20px);}
+            div li:nth-child(5){-moz-transform:rotate(-15deg);-webkit-transform:rotate(-15deg);-o-transform:rotate(-15deg);-ms-transform:rotate(-15deg);transform:rotate(-15deg);}
+            div li:nth-child(6){-moz-transform:rotate(15deg);-webkit-transform:rotate(15deg);-o-transform:rotate(15deg);-ms-transform:rotate(15deg);transform:rotate(15deg);;}
+            div li:nth-child(7){-moz-transform:scale(0.8);-webkit-transform:scale(0.8);-o-transform:scale(0.8);-ms-transform:scale(0.8);transform:scale(0.8);}
+            div li:nth-child(8){-moz-transform:scale(1.2);-webkit-transform:scale(1.2);-o-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2);}
+            div li:nth-child(9){-moz-transform:scaleX(0.8);-webkit-transform:scaleX(0.8);-o-transform:scaleX(0.8);-ms-transform:scaleX(0.8);transform:scaleX(0.8);}
+            div li:nth-child(10){-moz-transform:scaleY(1.2);-webkit-transform:scaleY(1.2);-o-transform:scaleY(1.2);-ms-transform:scaleY(1.2);transform:scaleY(1.2);}
+
+            div li:nth-child(11){-moz-transform:skew(5deg);-webkit-transform:skew(5deg);-o-transform:skew(5deg);-ms-transform:skew(5deg);transform:skew(5deg);}
+            div li:nth-child(12){-moz-transform:skew(5deg,5deg);-webkit-transform:skew(5deg,5deg);-o-transform:skew(5deg,5deg);-ms-transform:skew(5deg,5deg);transform:skew(5deg,5deg);}
+            div li:nth-child(13){-moz-transform:skewX(5deg);-webkit-transform:skewX(5deg);-o-transform:skewX(5deg);-ms-transform:skewX(5deg);transform:skewX(5deg);}
+            div li:nth-child(14){-moz-transform:skewY(5deg);-webkit-transform:skewY(5deg);-o-transform:skewY(5deg);-ms-transform:skewY(5deg);transform:skewY(5deg);}
+
+
+        </style>
+    </head>
+    <body>
+    <header>
+        <h3>Transfrom变换</h3>
+        <a href="../test.html">返回</a>
+    </header>
+    <div>
+        <ul>
+            <li><img src="../../../images/index/javascrip4.png" alt="JavaScript"/><p>matrix(1,0,1,1,0,1)</p></li>
+            <li><img src="../../../images/index/javascrip4.png" alt="JavaScript"/><p>translate(5%,10px)</p></li>
+            <li><img src="../../../images/index/cssimg.jpeg" alt="CSS"/><p>translateX(20px)</p></li>
+            <li><img src="../../../images/index/cssimg.jpeg" alt="CSS"/><p>translateY(20px)</p></li>
+            <li><img src="../../../images/index/htmlimg.jpeg" alt="HTML"/><p>rotate(-15deg);</p></li>
+            <li><img src="../../../images/index/htmlimg.jpeg" alt="HTML"/><p>rotate(15deg);</p></li>
+            <li><img src="../../../images/index/cssimg.jpeg" alt="CSS"/><p>scale(0.8)</p></li>
+            <li><img src="../../../images/index/cssimg.jpeg" alt="CSS"/><p>scale(1.2)</p></li>
+            <li><img src="../../../images/index/htmlimg.jpeg" alt="HTML"/><p>scaleX(0.8)</p></li>
+            <li><img src="../../../images/index/htmlimg.jpeg" alt="HTML"/><p>scaleY(1.2)</p></li>
+            <li><img src="../../../images/index/javascrip4.png" alt="JavaScript"/><p>skew(5deg);</p></li>
+            <li><img src="../../../images/index/javascrip4.png" alt="JavaScript"/><p>skew(5deg,5deg);</p></li>
+            <li><img src="../../../images/index/javascrip4.png" alt="JavaScript"/><p>skewX(5deg);</p></li>
+            <li><img src="../../../images/index/javascrip4.png" alt="JavaScript"/><p>skewY(5deg);</p></li>
+        </ul>
+    </div>
+</body>
+</html>
