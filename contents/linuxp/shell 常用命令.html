@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>
+  下载
+    
+    scp -r file1 userName@ip:/filePath //将file1复制到地址为ip的</title>
+
+</head>
+<body>
+<p>  下载</p>
+
+<pre><code>scp -r file1 userName@ip:/filePath //将file1复制到地址为ip的filePath路径下
+
+curl -O url  //下载url下的文件
+</code></pre>
+
+<p>  用量</p>
+
+<pre><code>du -sh xx.log //查询指定文件大小
+
+du -sh '正则' | sort //查询文件名符合正则的文件大小, 并按照文件大小排序
+
+du --exclude = '正则' -h //查询文件名符合正则的文件大小和（MAC无效，linux有效）
+
+du -sh //查询文件夹大小
+
+ifconfig //查看ip
+
+df -l  //查看硬盘用量
+</code></pre>
+
+<p>  移动</p>
+
+<pre><code>mv a.php b.php c.php test //将三个文件移动到test文件夹中
+
+mv {正则} ./log //移动所有文件名符合正则的文件到log文件夹中
+
+mv /A ./B/ //将文件从A移动到B 
+</code></pre>
+
+<p>  拼接</p>
+
+<pre><code>cat a.php b.php &gt; c.php  // 拼接
+
+cat *.php &gt; all.php  //拼接所有.php 文件，生成新文件all.php
+</code></pre>
+
+<p>  裁剪</p>
+
+<pre><code>cut -d "&amp;" -f 2,2 sortEasy.txt &gt; sortEasy1.txt //对sortEasy.txt按照&amp;进行划分并且取第二列写入sortEasy1.txt文件中。
+</code></pre>
+
+<p>  排序</p>
+
+<pre><code>sort xx_noabf.txt &gt; sort.txt //对xx_noabf.txt进行排序，并写入到sort.txt文件中。
+
+sort -n -k 1,1  sort_copy.txt &gt; sortEasy.txt //对sort_copy按照第一列进行数值排序。-n：数值排序。-r：反序排列。-k：指定排序列号。
+</code></pre>
+
+<p>  查询</p>
+
+<pre><code>grep -n "ABC" xx.log &gt; abc.txt //移动所有包括ABC字符串的行到abc.txt文件中
+
+grep -n -i "*[^abf]" xx.txt &gt; xx_noabf.txt //移动所有不包括abf字符串的行到xx_noabf.txt文件中。
+</code></pre>
+
+<p>  复制</p>
+
+<pre><code>cp xx_noabf.txt ./test //拷贝xx_noabf.txt到test文件中。
+
+cp sort.txt sort_copy.txt //复制文件sort.txt
+</code></pre>
+
+<p>  移除</p>
+
+<pre><code>rm -rf XX  //删除文件夹XX
+
+rm xx //移除文件xx
+</code></pre>
+
+<p>  软链</p>
+
+<pre><code>sudo ln -s /xx/yy rz  //添加软链  
+</code></pre>
+
+<p>  权限</p>
+
+<pre><code>sudo chmod 777 /xx-*  //改变权限
+</code></pre>
+
+<footer class="fr">
+    <hr/>
+    <p>
+        <time>2014-2015</time>
+        By windwiki
+    </p>
+</footer>
+</body>
+</html>
