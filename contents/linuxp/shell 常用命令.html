@@ -219,6 +219,24 @@ sort -n -k 1,1  sort_copy.txt &gt; sortEasy.txt //对sort_copy按照第一列进
 grep -n -i "*[^abf]" xx.txt &gt; xx_noabf.txt //移动所有不包括abf字符串的行到xx_noabf.txt文件中。-i:忽略字母大小写。
 </code></pre>
 
+<p>  查看</p>
+
+<pre>查看文件有cat, more, less, head, tail, nl等。甚至于vi,但是在只是查看的情况下，务必不要用vi来打开大文件，特别是在线上，因为vi也是占用io的。
+<code>cat -n abc.txt //列出文件全部内容，并且标记行号。
+
+more/less abc.txt //分页列出文件内容
+
+head -n 20 abc.txt //列出文件前20行内容
+
+tail -n 20 abc.txt //列出文件最后20行内容
+
+head -n 30 abc.txt | tail -n 2 //列出文件29-30行文件内容。
+
+tail -f abc.txt //实时监控文件内容变化。
+
+nl abc.txt  //列出文件全部内容，并标记行号。
+</code></pre>
+
 <p>  复制</p>
 
 <pre><code>cp xx_noabf.txt ./test //拷贝xx_noabf.txt到test文件中。
