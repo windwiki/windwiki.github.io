@@ -344,6 +344,26 @@
 
 
         <hr />
+        
+        <h4>忽略文件</h4>
+        <p>
+            添加.gitignore文件，在文件中加入想要忽略的文件，并提交。注意.gitignore只会忽略那些还没有加入版本控制的文件。并且：<br/>
+            /test //忽略与.gitignore同级的test文件。<br/>
+            test/ //忽略.gitignore同级以及下级的所有test文件。<br/></p>
+            <p><strong>如何忽略那些已经加入版本控制的文件？</strong></p>
+            <ul>
+                <li><p><strong>删除所有文件版本控制</strong></p>
+                <pre><code> git rm -r --cached .     </code></pre></li>
+                
+                <li><p><strong>添加</strong></p>
+                <pre><code> git add .</code></pre></li>
+                
+                <li><p><strong>提交</strong></p>
+                <pre><code> git commit -m"fix ignore" </code></pre></li>
+                
+                <li><p><strong>将代码推到远端，即生效</strong></p>
+                <pre><code> git push origin xx分支 </code></pre></li>
+            </ul>
 
         <h4>分支的合并</h4>
 
