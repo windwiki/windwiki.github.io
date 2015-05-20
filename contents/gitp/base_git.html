@@ -99,6 +99,20 @@
                     git push origin  feature/temp_branch_20140506  //推送本地分支代码到远程，完成合并操作<br/>
                     </code>
                 </p>
+                
+                <li>忽略文件</li>
+                <p>
+                    添加.gitignore文件，在文件中加入想要忽略的文件，并提交。注意.gitignore只会忽略那些还没有加入版本控制的文件。并且：
+                    /test //忽略与.gitignore同级的test文件。
+                    test/ //忽略.gitignore同级以及下级的所有test文件。
+                    *如何忽略那些已经加入版本控制的文件？
+                    <code>
+                    git rm -r --cached .                                    //删除所有文件版本控制。<br/>
+                    git add .                                                                         //<br/>
+                    git commit -m"fix ignore"                    //提交<br/>
+                    git push origin xx分支                        //将代码推到远端，即生效。<br/>
+                    </code>
+                </p>
                 <li>配置全局用户名和密码</li>
                 <p>
                     <code>
