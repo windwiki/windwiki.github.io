@@ -198,11 +198,21 @@ mv /A ./B/ //将文件从A移动到B
 <pre><code>cat a.php b.php &gt; c.php  // 拼接
 
 cat *.php &gt; all.php  //拼接所有.php 文件，生成新文件all.php
+
+join a.txt b.txt //连接两个文件
+
+paste a.txt b.txt //拼接两个文件为两列
+
 </code></pre>
 
 <p>  裁剪</p>
 
 <pre><code>cut -d "&amp;" -f 2,2 sortEasy.txt &gt; sortEasy1.txt //对sortEasy.txt按照&amp;进行划分并且取第二列写入sortEasy1.txt文件中。
+
+cut -d : -f a.txt //按照：剪切a.txt的第二列
+
+grep . filename > newfilename //删除文件中的空格，并保存到新的文件中。
+
 </code></pre>
 
 <p>  排序</p>
@@ -210,11 +220,18 @@ cat *.php &gt; all.php  //拼接所有.php 文件，生成新文件all.php
 <pre><code>sort xx_noabf.txt &gt; sort.txt //对xx_noabf.txt进行排序，并写入到sort.txt文件中。
 
 sort -n -k 1,1  sort_copy.txt &gt; sortEasy.txt //对sort_copy按照第一列进行数值排序。-n：数值排序。-r：反序排列。-k：指定排序列号。
+
+sort -t ';' +0 +3 a.txt -o b.txt //在a.txt中按照；为分列线，先按照第一列排序，再按照第二列排序，并将排序结果保存到文件b.txt中。
+
 </code></pre>
 
 <p>  查询</p>
 
-<pre><code>grep -n "ABC" xx.log &gt; abc.txt //移动所有包括ABC字符串的行到abc.txt文件中
+<pre><code> wc -l //查看文件的行数
+
+grep 'abc' abc.txt //查看文件中包含的abc信息
+	
+grep -n "ABC" xx.log &gt; abc.txt //移动所有包括ABC字符串的行到abc.txt文件中
 
 grep -n -i "*[^abf]" xx.txt &gt; xx_noabf.txt //移动所有不包括abf字符串的行到xx_noabf.txt文件中。-i:忽略字母大小写。
 </code></pre>
@@ -235,11 +252,26 @@ head -n 30 abc.txt | tail -n 2 //列出文件29-30行文件内容。
 tail -f abc.txt //实时监控文件内容变化。
 
 nl abc.txt  //列出文件全部内容，并标记行号。
+
+cd - //返回上一个目录
+
+uniq -u filename //显示不同的行
+
+uniq -d filename //显示重复的行
+
+find ./ -name 'xx' //按照文件名称在路径下查找文件
+
+find ./ -mtime -1 //查看一天以内的文件
+
+find ./ -mtime +2 //查看两天以前的文件
+
 </code></pre>
 
 <p>  区别</p>
 
 <pre><code>diff -r a b -q //递归比较a,b两个文件区别，并且不显示具体内容。
+
+diff a b //<:第一个文件有，:>第二个文件有。
 </code></pre>
 
 <p>  复制</p>
@@ -256,6 +288,13 @@ cp sort.txt sort_copy.txt //复制文件sort.txt
 rm xx //移除文件xx
 </code></pre>
 
+<p>  批量</p>
+
+<pre><code>rename .txt .c *  //批量更改文件中后缀.txt 为.c，
+
+rm xx //移除文件xx
+</code></pre>
+
 <p>  软链</p>
 
 <pre><code>sudo ln -s /xx/yy rz  //添加软链  
@@ -264,6 +303,60 @@ rm xx //移除文件xx
 <p>  权限</p>
 
 <pre><code>sudo chmod 777 /xx-*  //改变权限
+
+chown xx:yy filname
+</code></pre>
+
+<pre><code>fuser -k -n tcp 8087//杀死占用8087的所有进程
+</code></pre>
+
+<p>  睡眠</p>
+
+<pre><code>sleep 1s/1m/1h //睡眠1s/1m/1h
+</code></pre>
+
+<p>  分割</p>
+
+<pre><code>窗口分割
+
+横排：vsplit
+
+竖排：split
+
+窗口切换：ctrl + w
+
+翻页：b,f
+
+撤销：u
+
+重复：.
+
+</code></pre>
+
+<p>  基本信息</p>
+
+<pre><code>
+	
+操作系统：uname -a
+
+任务管理器：top
+
+环境变量：env
+
+</code></pre>
+
+<p>  GCC选项</p>
+
+<pre><code>
+	
+-O2 //二级优化
+
+-Werror //警告视为错误
+
+-Wall //显示警告信息
+
+-pipe //定位到管道
+
 </code></pre>
 
 <footer class="fr">
