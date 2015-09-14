@@ -166,6 +166,8 @@ sup {
 
 <pre><code>scp -r file1 userName@ip:/filePath //将file1复制到地址为ip的filePath路径下
 
+rsync -av source_dir --exclude=core user@remote:<DIR> //同步数据到另外一台机器
+
 curl -O url  //下载url下的文件
 </code></pre>
 
