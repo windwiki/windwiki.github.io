@@ -172,7 +172,6 @@ curl -O url  //下载url下的文件
 
 //下载文件夹，并进行限速，在当前文件夹下生成一个名为xx.yy.com的文件夹，并且保持下载文件在该机器上的文件目录位置。可以进行mv或cp，最后把机器rm即可。
 wget -r -l 0 --limit-rate=5m ftp://xx.yy.com:/aa/bb/cc
-
 </code></pre>
 
 <p>  用量</p>
@@ -208,17 +207,17 @@ cat *.php &gt; all.php  //拼接所有.php 文件，生成新文件all.php
 join a.txt b.txt //连接两个文件
 
 paste a.txt b.txt //拼接两个文件为两列
-
 </code></pre>
 
 <p>  裁剪</p>
 
-<pre><code>cut -d "&amp;" -f 2,2 sortEasy.txt &gt; sortEasy1.txt //对sortEasy.txt按照&amp;进行划分并且取第二列写入sortEasy1.txt文件中。
+<pre><code>
+
+cut -d "&amp;" -f 2,2 sortEasy.txt &gt; sortEasy1.txt // 对sortEasy.txt按照&amp;进行划分并且取第二列写入sortEasy1.txt文件中。
 
 cut -d : -f a.txt //按照：剪切a.txt的第二列
 
 grep . filename > newfilename //删除文件中的空格，并保存到新的文件中。
-
 </code></pre>
 
 <p>  排序</p>
@@ -228,7 +227,6 @@ grep . filename > newfilename //删除文件中的空格，并保存到新的文
 sort -n -k 1,1  sort_copy.txt &gt; sortEasy.txt //对sort_copy按照第一列进行数值排序。-n：数值排序。-r：反序排列。-k：指定排序列号。
 
 sort -t ';' +0 +3 a.txt -o b.txt //在a.txt中按照；为分列线，先按照第一列排序，再按照第二列排序，并将排序结果保存到文件b.txt中。
-
 </code></pre>
 
 <p>  查询</p>
@@ -270,7 +268,6 @@ find ./ -name 'xx' //按照文件名称在路径下查找文件
 find ./ -mtime -1 //查看一天以内的文件
 
 find ./ -mtime +2 //查看两天以前的文件
-
 </code></pre>
 
 <p>  区别</p>
@@ -301,20 +298,16 @@ control + k //删除光标后的所有文字
 control + h //删除光标前的单词
 
 control + d //删除光标后的单词
-
 </code></pre>
 <p>  屏蔽</p>
 <pre><code>
-	
 ~ vim 多行屏蔽
 ~ 屏蔽 ctrl+v 进入visual block, 使用上下键，选中要屏蔽的行，按下I键，选择要屏蔽的符号，按ESC，可以看到屏蔽结果。
 ~ 释放 ctrl+v 进入visual block, 使用上下键，选中要去除屏蔽的行。按d键，可看到屏蔽已去除。
-
 </code></pre>
 <p>  批量</p>
 
 <pre><code>rename .txt .c *  //批量更改文件中后缀.txt 为.c，
-
 </code></pre>
 
 <p>  软链</p>
@@ -371,7 +364,6 @@ chown xx:yy filname
 
 <p>  活动</p>
 <pre><code>
-	
 netstat -apn | grep 8011   //查看占用端口8011的应用
 
 pgrep lighttpd    //查看lighttpd应用的所有进程id
@@ -379,19 +371,17 @@ pgrep lighttpd    //查看lighttpd应用的所有进程id
 ps -ef | grep lighttpd | grep -v grep | cut -c 9-15  //打印进程id，等于命令'pgrep lighttpd'
 
 ps -ef | grep lighttpd | awk '{ print $2}'   //打印输出第二列，等于命令'pgrep lighttpd'
-
 </code></pre>
 
 <p>  杀手</p>
 <pre><code>
-	
 kill -9 1087   //杀死进程id为1087的应用
 
 fuser -k -n tcp 8009    //杀死占用端口8009的tcp应用
 
 pkill -9 lighttpd    // 杀死所有lighttpd进程，pkill = pgrep + kill
 
-~ xargs 把前面命令的输出，作为kil -s 9的输入参数
+~ xargs 把前面命令的输出，作为kill -s 9的输入参数
 ps -ef | grep lighttpd | grep -v grep | cut -c 9-15 | xargs kill -s 9 
 
 ps -ef | grep lighttpd | grep -v grep | awk '{ print $2}' | xargs kill -s 9 
