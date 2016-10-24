@@ -238,6 +238,11 @@ grep 'abc' abc.txt //查看文件中包含的abc信息
 grep -n "ABC" xx.log &gt; abc.txt //移动所有包括ABC字符串的行到abc.txt文件中
 
 grep -n -i "*[^abf]" xx.txt &gt; xx_noabf.txt //移动所有不包括abf字符串的行到xx_noabf.txt文件中。-i:忽略字母大小写。
+
+grep 'abc' abc.txt | grep -v '200'  //查询包含abc，但是不包含200的行
+
+grep -oP '\d+%' abc.txt //查询符合正则表达式的行，并且截取符合条件的串-o
+
 </code></pre>
 
 <p>  查看</p>
@@ -313,6 +318,14 @@ control + d //删除光标后的单词
 <p>  软链</p>
 
 <pre><code>sudo ln -s /xx/yy rz  //添加软链  
+</code></pre>
+
+<p>  跟踪</p>
+
+<pre><code>pstree -p  xyz  //查询用户xyz所有服务的进程编号，以树状显示。配以more/less。
+
+strace -o output.txt -T -tt -e trace=all -p  pid //追踪该pid下的访问之行情况，并打印到output.txt
+
 </code></pre>
 
 <p>  权限</p>
@@ -395,6 +408,13 @@ kill -s 9 `pgrep lighttpd`
 </code></pre>
 
 <p>  基本信息</p>
+
+<p>  卸载</p>
+
+<pre><code>
+diskutil unmount /Volumes/xx //对于xx已经卸载，但是连接还断不掉的情况，可以亲自移除
+
+</code></pre>
 
 <pre><code>
 操作系统：uname -a
