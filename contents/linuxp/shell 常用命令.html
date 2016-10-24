@@ -335,9 +335,6 @@ strace -o output.txt -T -tt -e trace=all -p  pid //追踪该pid下的访问之�
 chown xx:yy filname
 </code></pre>
 
-<pre><code>fuser -k -n tcp 8087//杀死占用8087的所有进程
-</code></pre>
-
 <p>  睡眠</p>
 
 <pre><code>sleep 1s/1m/1h //睡眠1s/1m/1h
@@ -405,9 +402,11 @@ pgrep lighttpd | xargs kill -s 9
 kill -s 9 `ps -ef | grep lighttpd | grep -v grep | awk '{ print $2}' `
 
 kill -s 9 `pgrep lighttpd` 
+
+<pre><code>fuser -k -n tcp 8087//杀死占用8087的所有进程
 </code></pre>
 
-<p>  基本信息</p>
+</code></pre>
 
 <p>  卸载</p>
 
@@ -416,6 +415,7 @@ diskutil unmount /Volumes/xx //对于xx已经卸载，但是连接还断不掉�
 
 </code></pre>
 
+<p>  基本信息</p>
 <pre><code>
 操作系统：uname -a
 
