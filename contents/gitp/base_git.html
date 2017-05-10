@@ -37,7 +37,7 @@
                     git rm                                                 //从当前的工作空间和索引中删除文件<br/>
                     git commit    m "related comment"    //提交更新到本地当前分支，并写明注释<br/>
                     git push origin master                         //推送本地代码到远程分支<br/>
-                    git log                                                 //查看历史日志<br/>
+                    gilog                                                 //查看历史日志<br/>
                     </code>
                 </p>
                 <li>工作内容的储存（在某分支上工作到一半时，不想提交代码，但是想转移到另一个分支。）</li>
@@ -85,6 +85,15 @@
                     git push origin test:test                         //提交本地test分支作为远程的test分支<br/>
                     </code>
                 </p>
+
+                <li>提交历史</li>
+                <p>
+                    <code>
+                    git log //查看提交历史
+                    git blame -L 160,+10 xxx.cc  //查看某个文件的修改记录
+                    git rebase -i HEAD~4  //合并commit记录，前四次。注意已经rebase过的commit节点最好不要再次rebase    
+                    </code>
+                </p>                    
 
                 <li>分支的合并</li>
                 <p>
