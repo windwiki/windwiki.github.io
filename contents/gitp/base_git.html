@@ -214,12 +214,21 @@
 
     <pre><code>  git push origin master
     </code></pre></li>
+        </ul>
+        <ul>
             <li><p><strong>查看历史日志</strong></p>
 
     <pre><code>  git log
     </code></pre></li>
-        </ul>
+            <li><p><strong>查看某个文件的修改记录</strong></p>
 
+    <pre><code>  git blame -L 160,+10 xxx.cc
+    </code></pre></li>
+            <li><p><strong>合并commit记录，前四次。注意已经rebase过的commit节点最好不要再次rebase</strong></p>
+
+    <pre><code>  git rebase -i HEAD~4
+    </code></pre></li>
+        </ul>
 
         <hr />
 
@@ -345,11 +354,17 @@
 
         <hr />
         
-        <h4>忽略文件</h4>
+        <h4>忽略与保持</h4>
         <p>
-            添加.gitignore文件，在文件中加入想要忽略的文件，并提交。注意.gitignore只会忽略那些还没有加入版本控制的文件。并且：<br/>
-            /test //忽略与.gitignore同级的test文件。<br/>
-            test/ //忽略.gitignore同级以及下级的所有test文件。<br/></p>
+            <p><strong>添加.gitignore文件，在文件中加入想要忽略的文件，并提交。</strong></p>
+              注意.gitignore只会忽略那些还没有加入版本控制的文件。并且：<br/>
+            <ul>
+                <li><p><strong>忽略与.gitignore同级的test文件</strong></p>
+                <pre><code> /test  </code></pre></li>
+                
+                <li><p><strong>忽略.gitignore同级以及下级的所有test文件</strong></p>
+                <pre><code> test/ </code></pre></li>
+            </ul>
             <p><strong>如何忽略那些已经加入版本控制的文件？</strong></p>
             <ul>
                 <li><p><strong>删除所有文件版本控制</strong></p>
@@ -364,7 +379,11 @@
                 <li><p><strong>将代码推到远端，即生效</strong></p>
                 <pre><code> git push origin xx分支 </code></pre></li>
             </ul>
-
+            <p><strong>如何让空目录被git识别?</strong></p>
+            <ul>
+                <li><p><strong>在git中，空目录文件是不会被识别并提交的，需要在目录下添加keep文件</strong></p>
+                <pre><code> touch .gitkeep</code></pre></li>
+            </ul>
         <h4>分支的合并</h4>
 
         <p> 以master分支合到 feature/temp_branch_20140506 分支为例<br/></p>
