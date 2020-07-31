@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>風子の空</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body {text-align: center;}
+        header {margin: 10px 0 10px 0;}
+        #outer {width: 480px;height: 800px;margin: 20px auto; text-align: left;}
+        input#tid {margin:0 5px;width: 300px;height: 20px;}
+        input#btn {width: 40px;height: 30px;line-height: 30px;font-size: 20px;}
+        input#clear {width: 40px;height: 30px;line-height: 30px;font-size: 20px;}
+        section {margin-top:10px; width:470px; height:700px; border: 1px solid black;text-align: left;}
+        p {margin: 5px 0 0 5px; width: 450px;height: 30px;background-color: lightgreen;line-height: 30px;padding-left: 10px;}
+
+    </style>
+    <script src="../../../javascripts/tool.js"></script>
+    <script>
+        var obj = {
+            "key":"key",
+            "value":"value",
+//            obj(){
+//
+//            },
+            getKey: function(){
+                return this.key;
+            },
+            setKey: function(key){
+                this.key = key;
+            },
+            getValue: function(){
+                return this.value;
+            },
+            setValue: function(value){
+                this.value = value;
+            }
+        };
+        document.ready(function(){
+            var btn = document.getElementById("btn");
+            var clear = document.getElementById("clear");
+            showPdoms();
+            btn.onclick = addToDOM;
+            clear.onclick = clearSto;
+        });
+
+        function showPdoms(){
+            var pstr = localStorage.getItem("lots");
+            //console.log(pstr);
+            if(pstr) {
+                var strArr = JSON.parse(pstr);
+                //console.log(strArr);
+                var sto = document.getElementById("sto");
+                for (var i = 0; i < strArr.length; i++) {
+                    var tn = document.createTextNode(strArr[i].value);
+                    console.log(strArr[i]);
+                    var pn = document.createElement("p");
+                    pn.appendChild(tn);
+                    sto.appendChild(pn);
+                }
+            } else {
+                var strArr = [];
+                localStorage.setItem("lots", JSON.stringify(strArr));
+            }
+        };
+
+        function addToDOM(){
+            var tv = document.getElementById("tid");
+            var sto = document.getElementById("sto");
+            if(sto.children.length>5){
+                alert("Your add too many!");
+                return ;
+            }
+            var tn = document.createTextNode(tv.value);
+            var pn = document.createElement("p");
+            pn.appendChild(tn);
+            sto.appendChild(pn);
+
+            //var obj = new obj();
+            obj.setKey("key"+ (new Date()).getTime());
+            obj.setValue(tv.value);
+            pn.obj=obj;
+            pn.onclick = removeNode;
+            addToLocalSto(obj);
+        }
+
+
+        function removeNode(e){
+            var target = e|| e.target;
+            console.log(target);
+
+            var pstr = localStorage.getItem("lots");
+            var strArr = JSON.parse(pstr);
+            strArr.removeItem(target.obj);
+            //delete target.obj;
+//            target.parentNode.removeChild(target);
+//            var childs = target.children;
+//            for(var i=0;i<childs.length;i++){
+//                console.log((childs[i].nodeType+" "+childs[i].nodeName));
+//                if(childs[i].nodeType.toString()==="3"){
+//                    strArr.removeItem(childs[i].value);
+//                }
+//            }
+
+        }
+        function addToLocalSto(obj){
+            var pstr = localStorage.getItem("lots");
+            var strArr = JSON.parse(pstr);
+            strArr.push(obj);
+            localStorage.setItem("lots",JSON.stringify(strArr));
+        }
+
+        function clearSto(){
+            localStorage.removeItem("lots");
+//            var sto = document.getElementById("sto");
+//            var pns = sto.getElementsByTagName("p");
+           // console.log(sto.children);
+//            for(var i=0;i<pns.length;i++){
+//                console.log(pns[i]);
+//                sto.removeChild(pns[i]);
+//            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <h3>本地存储</h3>
+    <a href="../test.html">返回</a>
+</header>
+<div id="outer">
+    输入标签<input id="tid" type="text">
+    <input id="btn" type="button" value="add">
+    <input id="clear" type="button" value="clear">
+    <section id="sto">
+
+    </section>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>風子の空</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body {text-align: center;}
+        header {margin: 10px 0 10px 0;}
+
+        #clock {
+            width: 250px; height: 80px;background: green;
+            margin: 10px auto;
+        }
+        span {line-height:80px;padding:0px 15px; margin:0 8px; border: 1px solid black;background: wheat;}
+    </style>
+    <script>
+        function format(num){
+            return num.toString().replace(/^(\d)$/,"0$1");
+        }
+        function setTime(spans){
+            var date = new Date();
+            var tis = [date.getHours(),date.getMinutes(),date.getSeconds()];
+            for(var i=0;i<spans.length;i++){
+                spans[i].innerHTML=format(tis[i]);
+            }
+        }
+        window.onload = function(){
+            var spans = document.getElementsByTagName("span");
+            setTime(spans);
+            setInterval(function(){setTime(spans);},1000);
+        };
+    </script>
+</head>
+<body>
+<header>
+    <h3>网页时钟</h3>
+    <a href="../test.html">返回</a>
+</header>
+<div id="clock">
+    <span></span>h
+    <span></span>m
+    <span></span>s
+</div>
+</body>
+</html>

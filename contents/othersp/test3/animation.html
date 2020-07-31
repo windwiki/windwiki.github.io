@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ainimation</title>
+    <style>
+        body {margin:auto auto; padding: 40px;}
+        #box {width: 300px; height: 100px;background: green;
+            position: relative;
+            animation: mymove 5s infinite;
+            -webkit-animation: mymove 5s infinite;
+        }
+        @keyframes mymove {
+            from {left: 20px; }
+            to {left: 400px; }
+        }
+        @-webkit-keyframes mymove {
+            from {left: 20px; }
+            to {left: 400px; }
+        }
+    </style>
+</head>
+<body>
+<p>IE9以及更早版本不支持Animation</p>
+<div id="box">
+
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>風子の空</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        body {text-align: center;}
+        header {margin: 10px 0 10px 0;}
+        div {margin: auto auto;text-align:left;padding: 5px 5px 5px 50px; width: 600px;height: 140px;border: solid 1px green;
+        background-color: gainsboro;border-radius: 10px;font-size: 1.2em;color:green;overflow: hidden;}
+        p {margin-top: 8px;line-height: 1.1em;}
+
+    </style>
+    <script>
+        function exchange(){
+            var box=document.getElementById("box");
+            box.appendChild(box.firstChild);
+
+            console.log(box);
+        }
+        setInterval("exchange()",2000);
+    </script>
+</head>
+<body>
+<header>
+    <h3>列表信息轮转</h3>
+    <a href="../test.html">返回</a>
+</header>
+<div>
+    <ol id="box">
+        <p>1.这些疯女人，让人过双十一吗</p>
+        <p>2.即使是微笑着，我也在思考。</p>
+        <p>3.为什么不顺着路一直走呢。虽然这样会更轻松，可是我不想说谎</p>
+        <p>4.今天太阳不错。</p>
+        <p>5.虽然不知道以后会怎样，但这是我第一次为自己争取。</p>
+        <p>6.选择改变就是意味着失败。路还很遥远，不能慢慢来。</p>
+        <p>7.被雨淋，被风吹，一天没吃饭的结果，就是键盘在眼前，却敲不出一个字。</p>
+    </ol>
+</div>
+</body>
+</html>

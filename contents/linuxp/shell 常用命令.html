@@ -1,0 +1,452 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>風子の空</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+    <link rel="stylesheet" href="../../stylesheets/index.css">
+</head>
+<body>
+<div class="box">
+
+<header class="hd" id="mark">
+    <h1>風子の空</h1>
+</header>
+
+<header>
+    <h3 class="hh3">Shell常用操作小结</h3>
+    <p class="cat">分类：<a href="index.html">shell</a></p>
+</header>
+
+<p>  下载</p>
+
+<pre><code>scp -r file1 userName@ip:/filePath //将file1复制到地址为ip的filePath路径下
+
+rsync -av source_dir --exclude=core user@remote:<DIR> //同步数据到另外一台机器
+
+curl -O url  //下载url下的文件
+
+//下载文件夹，并进行限速，在当前文件夹下生成一个名为xx.yy.com的文件夹，并且保持下载文件在该机器上的文件目录位置。可以进行mv或cp，最后把机器rm即可。
+wget -r -l 0 --limit-rate=5m ftp://xx.yy.com:/aa/bb/cc
+</code></pre>
+
+<p>  用量</p>
+
+<pre><code>du -sh xx.log //查询指定文件大小
+
+du -sh '正则' | sort //查询文件名符合正则的文件大小, 并按照文件大小排序
+
+du --exclude = '正则' -h //查询文件名不符合正则的文件大小和（MAC无效，linux有效）
+
+du -sh //查询文件夹大小
+
+ifconfig //查看ip
+
+df -l  //查看硬盘用量
+</code></pre>
+
+<p>  移动</p>
+
+<pre><code>mv a.php b.php c.php test //将三个文件移动到test文件夹中
+
+mv {正则} ./log //移动所有文件名符合正则的文件到log文件夹中
+
+mv /A ./B/ //将文件从A移动到B 
+</code></pre>
+
+<p>  拼接</p>
+
+<pre><code>cat a.php b.php &gt; c.php  // 拼接
+
+cat *.php &gt; all.php  //拼接所有.php 文件，生成新文件all.php
+
+join a.txt b.txt //连接两个文件
+
+paste a.txt b.txt //拼接两个文件为两列
+</code></pre>
+
+<p>  裁剪</p>
+
+<pre><code>
+
+cut -d "&amp;" -f 2,2 sortEasy.txt &gt; sortEasy1.txt // 对sortEasy.txt按照&amp;进行划分并且取第二列写入sortEasy1.txt文件中。
+
+cut -d : -f a.txt //按照：剪切a.txt的第二列
+
+grep . filename > newfilename //删除文件中的空格，并保存到新的文件中。
+</code></pre>
+
+<p>  排序</p>
+
+<pre><code>sort xx_noabf.txt &gt; sort.txt //对xx_noabf.txt进行排序，并写入到sort.txt文件中。
+
+sort -n -k 1,1  sort_copy.txt &gt; sortEasy.txt //对sort_copy按照第一列进行数值排序。-n：数值排序。-r：反序排列。-k：指定排序列号。
+
+sort -t ';' +0 +3 a.txt -o b.txt //在a.txt中按照；为分列线，先按照第一列排序，再按照第二列排序，并将排序结果保存到文件b.txt中。
+</code></pre>
+
+<p>  查询</p>
+
+<pre><code> wc -l //查看文件的行数
+
+grep 'abc' abc.txt //查看文件中包含的abc信息
+	
+grep -n "ABC" xx.log &gt; abc.txt //移动所有包括ABC字符串的行到abc.txt文件中
+
+grep -n -i "*[^abf]" xx.txt &gt; xx_noabf.txt //移动所有不包括abf字符串的行到xx_noabf.txt文件中。-i:忽略字母大小写。
+
+grep 'abc' abc.txt | grep -v '200'  //查询包含abc，但是不包含200的行
+
+grep -oP '\d+%' abc.txt //查询符合正则表达式的行，并且截取符合条件的串-o
+
+</code></pre>
+
+<p>  查看</p>
+
+<pre>查看文件有cat, more, less, head, tail, nl等。甚至于vi,但是在只是查看的情况下，务必不要用vi来打开大文件，特别是在线上，因为vi也是占用io的。
+<code>cat -n abc.txt //列出文件全部内容，并且标记行号。
+
+more/less abc.txt //分页列出文件内容
+
+head -n 20 abc.txt //列出文件前20行内容
+
+tail -n 20 abc.txt //列出文件最后20行内容
+
+head -n 30 abc.txt | tail -n 2 //列出文件29-30行文件内容。
+
+tail -f abc.txt //实时监控文件内容变化。
+
+nl abc.txt  //列出文件全部内容，并标记行号。
+
+cd - //返回上一个目录
+
+uniq -u filename //显示不同的行
+
+uniq -d filename //显示重复的行
+
+find ./ -name 'xx' //按照文件名称在路径下查找文件
+
+find ./ -mtime -1 //查看一天以内的文件
+
+find ./ -mtime +2 //查看两天以前的文件
+</code></pre>
+
+<p>  区别</p>
+
+<pre><code>diff -r a b -q //递归比较a,b两个文件区别，并且不显示具体内容。
+
+diff a b //<:第一个文件有，:>第二个文件有。
+</code></pre>
+
+<p>  复制</p>
+
+<pre><code>cp xx_noabf.txt ./test //拷贝xx_noabf.txt到test文件中。
+
+cp sort.txt sort_copy.txt //复制文件sort.txt
+</code></pre>
+
+<p>  移除</p>
+
+<pre><code>rm -rf XX  //删除文件夹XX
+
+rm xx //移除文件xx
+
+//命令行中
+control + w //删除光标前的所有文字
+
+control + k //删除光标后的所有文字
+
+control + h //删除光标前的单词
+
+control + d //删除光标后的单词
+</code></pre>
+<p>  屏蔽</p>
+<pre><code>
+~ vim 多行屏蔽
+~ 屏蔽 ctrl+v 进入visual block, 使用上下键，选中要屏蔽的行，按下I键，选择要屏蔽的符号，按ESC，可以看到屏蔽结果。
+~ 释放 ctrl+v 进入visual block, 使用上下键，选中要去除屏蔽的行。按d键，可看到屏蔽已去除。
+</code></pre>
+<p>  批量</p>
+
+<pre><code>rename .txt .c *  //批量更改文件中后缀.txt 为.c，
+</code></pre>
+
+<p>  软链</p>
+
+<pre><code>sudo ln -s /xx/yy rz  //添加软链  
+</code></pre>
+
+<p>  跟踪</p>
+
+<pre><code>pstree -p  xyz  //查询用户xyz所有服务的进程编号，以树状显示。配以more/less。
+
+strace -o output.txt -T -tt -e trace=all -p  pid //追踪该pid下的访问之行情况，并打印到output.txt
+
+</code></pre>
+
+<p>  权限</p>
+
+<pre><code>sudo chmod 777 /xx-*  //改变权限
+
+chown xx:yy filname
+</code></pre>
+
+<p>  睡眠</p>
+
+<pre><code>sleep 1s/1m/1h //睡眠1s/1m/1h
+</code></pre>
+
+<p>  分割</p>
+
+<pre><code>窗口分割
+
+1.编辑窗口分割
+
+横排：vsplit
+
+竖排：split
+
+窗口切换：ctrl + w
+
+翻页：b,f
+
+撤销：u
+
+重复：.
+
+2.命令窗口分割
+
+竖排：command + d 
+
+横排：command + shift + d
+
+关闭：command + w
+
+同窗口切换：command + option + 左右键
+
+异窗口切换：command + 左右键 || command + 数字
+
+</code></pre>
+
+<p>  活动</p>
+<pre><code>
+netstat -apn | grep 8011   //查看占用端口8011的应用
+
+pgrep lighttpd    //查看lighttpd应用的所有进程id
+
+ps -ef | grep lighttpd | grep -v grep | cut -c 9-15  //打印进程id，等于命令'pgrep lighttpd'
+
+ps -ef | grep lighttpd | awk '{ print $2}'   //打印输出第二列，等于命令'pgrep lighttpd'
+</code></pre>
+
+<p>  杀手</p>
+<pre><code>
+kill -9 1087   //杀死进程id为1087的应用
+
+fuser -k -n tcp 8009    //杀死占用端口8009的tcp应用
+
+pkill -9 lighttpd    // 杀死所有lighttpd进程，pkill = pgrep + kill
+
+~ xargs 把前面命令的输出，作为kill -s 9的输入参数
+ps -ef | grep lighttpd | grep -v grep | cut -c 9-15 | xargs kill -s 9 
+
+ps -ef | grep lighttpd | grep -v grep | awk '{ print $2}' | xargs kill -s 9 
+
+pgrep lighttpd | xargs kill -s 9
+
+~ 也可以调换位置
+kill -s 9 `ps -ef | grep lighttpd | grep -v grep | awk '{ print $2}' `
+
+kill -s 9 `pgrep lighttpd` 
+
+<pre><code>fuser -k -n tcp 8087//杀死占用8087的所有进程
+</code></pre>
+
+</code></pre>
+
+<p>  卸载</p>
+
+<pre><code>
+diskutil unmount /Volumes/xx //对于xx已经卸载，但是连接还断不掉的情况，可以亲自移除
+
+</code></pre>
+
+<p>  基本信息</p>
+<pre><code>
+操作系统：uname -a
+
+本机ip: hostname -i 
+
+任务管理器：top
+
+环境变量：env
+
+</code></pre>
+
+<p>  GCC选项</p>
+
+<pre><code>
+-O2 //二级优化
+
+-Werror //警告视为错误
+
+-Wall //显示警告信息
+
+-pipe //定位到管道
+
+</code></pre>
+
+<footer class="fr">
+    <hr/>
+    <p>
+        <time>2014-2016</time>
+        By windwiki
+    </p>
+</footer>
+    </div>
+</body>
+</html>
