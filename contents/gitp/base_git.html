@@ -165,132 +165,272 @@
             <p class="cat">分类：<a href="index.html">Git</a></p>
         </header>
 
-        <article id="list">
-            <ol>
-                <li>克隆远程项目到本地</li>
-                <p>
-                    <code>
-                    git clone                                       //复制项目
-                    </code>
-                </p>
+    <title>克隆远程项目到本地</title>
 
-                <li>状态的查看以及代码更新的提交</li>
-                <p>
-                    <code>
-                    git status                                               //查看状态<br/>
-                    git checkout .                                       //放弃所有的代码更改（从上一次提交的版本中回滚）<br/>
-                    git checkout xx文件                             //放弃某文件的代码更改（从上一次提交的版本中回滚）<br/>
-                    git add .                                                 //添加所有变更的代码加入到git索引<br/>
-                    git add  xx文件                                     //添加特定的变更到git索引<br/>
-                    git rm                                                 //从当前的工作空间和索引中删除文件<br/>
-                    git commit    m "related comment"    //提交更新到本地当前分支，并写明注释<br/>
-                    git push origin master                         //推送本地代码到远程分支<br/>
-                    gilog                                                 //查看历史日志<br/>
-                    </code>
-                </p>
-                <li>工作内容的储存（在某分支上工作到一半时，不想提交代码，但是想转移到另一个分支。）</li>
-                <p>
-                    <code>
-                    git stash                                                //保存程序修改到git栈，但是不提交。stash以后用git status查看，工作目录下是干净的，可以切换到其它分支工作。<br/>
-                    git stash pop                                        //恢复上次stash（最近一次）的代码到当前分支。同时将内容从堆栈中移走。<br/>
-                    git stash list                                          //列出存储的相关stash list<br/>
-                    git stash apply stash@{n}                   //将制定版本号为stash@{n}的工作内容取出到当前分支<br/>
-                    git stash drop stash@{n}                    //丢弃版本号为stash@{n}的工作存储<br/>
-                    git stash clear                                      //清空stash存储内容<br/>
-                    git stash branch feature/temp_branch_20140506  //从储藏中创建分支 feature/temp_branch_20140506<br/>
-                    </code>
-                </p>
-                <li>分支的显示, 切换, 更新</li>
-                <p>
-                    <code>
-                    git checkout  xx分支                            //把head指向某分支，也就是把当前的工作节点转为xx分支。所谓分支，就是状态链中的某一点。<br/>
-                    git pull                                                   //更新<br/>
-                    git remote prune origin                       //有可能某远程分支已经被删除，该命令执行后可以查看当前远程分支有哪些<br/>
-                    git remote show origin                        //查看远程分支的状态<br/>
-                    git branch -a                                         //列出所有分支<br/>
-                    git branch                                             //列出本地分支<br/>
-                    git branch -r                                         //列出远程分支<br/>
-                    </code>
-                </p>
+    <h4>克隆远程项目到本地</h4>
 
-                <li>新建分支(从master拉新分支为例)</li>
-                <p>
-                    <code>
-                    git checkout master                             //从master拉新分支要先切换到master<br/>
-                    git checkout - b  newbranch                //创建本地分支名为newbranch<br/>
-                    git push origin newbranch                   //推送本地新分支到远程，即创建远程分支<br/>
-                    git branch --set-upstream-too=origin/newbranch newbranch     //本地分支newbranch与远程分支newbranch挂钩<br/>
-                    </code>
-                </p>
+    <ul>
+        <li><p><strong>复制项目</strong></p>
 
-                <li>删除分支</li>
-                <p>
-                    <code>
-                    git branch -d  xx分支                            //删除本地分支(注意删除的是已经merge的分支，对于未合并的分支是删除不掉的。强制删除用-D)<br/>
-                    git push origin : <远程分支>               //推送空到远程分支，即删除远程分支<br/>
-                    ：的其它例子<br/>
-                    git push origin test:master                   //提交本地分支test作为远程master分支<br/>
-                    git push origin test:test                         //提交本地test分支作为远程的test分支<br/>
-                    </code>
-                </p>
+    <pre><code>  git clone
+    </code></pre></li>
+        </ul>
 
-                <li>提交历史</li>
-                <p>
-                    <code>
-                    git log //查看提交历史
-                    git blame -L 160,+10 xxx.cc  //查看某个文件的修改记录
-                    git rebase -i HEAD~4  //合并commit记录，前四次。注意已经rebase过的commit节点最好不要再次rebase    
-                    </code>
-                </p>                    
 
-                <li>分支的合并</li>
-                <p>
-                    以master分支合到 feature/temp_branch_20140506 分支为例<br/>
-                    <code>
-                    git checkout master                                                  //分支移动到master<br/>
-                    git pull                                                                         //更新远程代码到本地<br/>
-                    git checkout  feature/temp_branch_20140506     //分支移动到 feature/temp_branch_20140506<br/>
-                    git pull<br/>
-                    git merge master                                                       //把本地master合并到当前分支<br/>
-                    //如果有冲突，解决冲突<br/>
-                    git push origin  feature/temp_branch_20140506  //推送本地分支代码到远程，完成合并操作<br/>
-                    </code>
-                </p>
+        <hr />
+
+        <h4>状态的查看以及代码更新的提交</h4>
+
+        <ul>
+            <li><p><strong>查看状态</strong></p>
+
+    <pre><code>  git status
+    </code></pre></li>
+            <li><p><strong>放弃所有的代码更改（从上一次提交的版本中回滚）</strong></p>
+
+    <pre><code>  git checkout .
+    </code></pre></li>
+            <li><p><strong>放弃某文件的代码更改（从上一次提交的版本中回滚）</strong></p>
+
+    <pre><code>  git checkout xx文件
+    </code></pre></li>
+            <li><p><strong>添加所有变更的代码加入到git索引</strong></p>
+
+    <pre><code>  git add .
+    </code></pre></li>
+            <li><p><strong>添加特定的变更到git索引</strong></p>
+
+    <pre><code>  git add  xx文件
+    </code></pre></li>
+            <li><p><strong>从当前的工作空间和索引中删除文件</strong></p>
+
+    <pre><code>  git rm
+    </code></pre></li>
+            <li><p><strong>提交更新到本地当前分支，并写明注释</strong></p>
+
+    <pre><code>  git commit m "related comment"
+    </code></pre></li>
+            <li><p><strong>推送本地代码到远程分支</strong></p>
+
+    <pre><code>  git push origin master
+    </code></pre></li>
+        </ul>
+        <ul>
+            <li><p><strong>查看历史日志</strong></p>
+
+    <pre><code>  git log
+    </code></pre></li>
+            <li><p><strong>查看某个文件的修改记录</strong></p>
+
+    <pre><code>  git blame -L 160,+10 xxx.cc
+    </code></pre></li>
+            <li><p><strong>合并commit记录，前四次。注意已经rebase过的commit节点最好不要再次rebase</strong></p>
+
+    <pre><code>  git rebase -i HEAD~4
+    </code></pre></li>
+        </ul>
+
+        <hr />
+
+        <h4>工作内容的储存（在某分支上工作到一半时，不想提交代码，但是想转移到另一个分支。）</h4>
+
+        <ul>
+            <li><p><strong>保存程序修改到git栈，但是不提交。stash以后用git status查看，工作目录下是干净的，可以切换到其它分支工作。</strong></p>
+
+    <pre><code>  git stash
+    </code></pre></li>
+            <li><p><strong>恢复上次stash（最近一次）的代码到当前分支。同时将内容从堆栈中移走。</strong></p>
+
+    <pre><code>  git stash pop
+    </code></pre></li>
+            <li><p><strong>列出存储的相关stash list</strong></p>
+
+    <pre><code>  git stash list
+    </code></pre></li>
+            <li><p><strong>将制定版本号为stash@{n}的工作内容取出到当前分支</strong></p>
+
+    <pre><code>  git stash apply stash@{n}
+    </code></pre></li>
+            <li><p><strong>丢弃版本号为stash@{n}的工作存储</strong></p>
+
+    <pre><code>  git stash drop stash@{n}
+    </code></pre></li>
+            <li><p><strong>清空stash存储内容</strong></p>
+
+    <pre><code>  git stash clear
+    </code></pre></li>
+            <li><p><strong>从储藏中创建分支 feature/temp_branch_20140506</strong></p>
+
+    <pre><code>  git stash branch feature/temp_branch_20140506
+    </code></pre></li>
+        </ul>
+
+
+        <hr />
+
+        <h4>分支的显示, 切换, 更新</h4>
+
+        <ul>
+            <li><p><strong>把head指向某分支，也就是把当前的工作节点转为xx分支。所谓分支，就是状态链中的某一点。</strong></p>
+
+    <pre><code>  git checkout  xx分支
+    </code></pre></li>
+            <li><p><strong>更新</strong></p>
+
+    <pre><code>  git pull
+    </code></pre></li>
+            <li><p><strong>有可能某远程分支已经被删除，该命令执行后可以查看当前远程分支有哪些</strong></p>
+
+    <pre><code>  git remote prune origin
+    </code></pre></li>
+            <li><p><strong>查看远程分支的状态</strong></p>
+
+    <pre><code>  git remote show origin
+    </code></pre></li>
+            <li><p><strong>列出所有分支</strong></p>
+
+    <pre><code>  git branch -a
+    </code></pre></li>
+            <li><p><strong>列出本地分支</strong></p>
+
+    <pre><code>  git branch
+    </code></pre></li>
+            <li><p><strong>列出远程分支</strong></p>
+
+    <pre><code>  git branch -r
+    </code></pre></li>
+        </ul>
+
+
+        <hr />
+
+        <h4>新建分支(从master拉新分支为例)</h4>
+
+        <ul>
+            <li><p><strong>从master拉新分支要先切换到master</strong></p>
+
+    <pre><code>  git checkout master
+    </code></pre></li>
+            <li><p><strong>创建本地分支名为newbranch</strong></p>
+
+    <pre><code>  git checkout - b  newbranch
+    </code></pre></li>
+            <li><p><strong>推送本地新分支到远程，即创建远程分支</strong></p>
+
+    <pre><code>  git push origin newbranch
+    </code></pre></li>
+            <li><p><strong>本地分支newbranch与远程分支newbranch挂钩（有默认行为，可以不执行）</strong></p>
+
+    <pre><code>  git branch --set-upstream-too=origin/newbranch newbranch
+    </code></pre></li>
+        </ul>
+
+
+        <hr />
+
+        <h4>删除分支</h4>
+
+        <ul>
+            <li><p><strong>删除本地分支(注意删除的是已经merge的分支，对于未合并的分支是删除不掉的。强制删除用-D)</strong></p>
+
+    <pre><code>  git branch -d  xx分支
+    </code></pre></li>
+            <li><p><strong>推送空到远程分支，即删除远程分支</strong></p>
+
+    <pre><code>  git push origin : &lt;远程分支&gt;
+    </code></pre>
+
+                <p>  /<em>：的其它例子</em>/</p></li>
+            <li><p><strong>提交本地分支test作为远程master分支</strong></p>
+
+    <pre><code>  git push origin test:master
+    </code></pre></li>
+            <li><p><strong>提交本地test分支作为远程的test分支</strong></p>
+
+    <pre><code>  git push origin test:test
+    </code></pre></li>
+        </ul>
+
+
+        <hr />
+        
+        <h4>忽略与保持</h4>
+        <p>
+            <p><strong>在.gitignore中加入想要忽略的文件</strong></p>
+            <ul>
+                <li><p><strong>忽略与.gitignore同级的test文件(注意.gitignore只会忽略那些还没有加入版本控制的文件)</strong></p>
+                <pre><code> /test  </code></pre></li>
                 
-                <li>忽略文件</li>
-                <p>
-                    添加.gitignore文件，在文件中加入想要忽略的文件，并提交。注意.gitignore只会忽略那些还没有加入版本控制的文件。并且：
-                    /test //忽略与.gitignore同级的test文件。
-                    test/ //忽略.gitignore同级以及下级的所有test文件。
-                    *如何忽略那些已经加入版本控制的文件？
-                    <code>
-                    git rm -r --cached .                                    //删除所有文件版本控制。<br/>
-                    git add .                                                                         //<br/>
-                    git commit -m"fix ignore"                    //提交<br/>
-                    git push origin xx分支                        //将代码推到远端，即生效。<br/>
-                    </code>
-                </p>
-                <li>配置全局用户名和密码</li>
-                <p>
-                    <code>
-                    git config --global user.name "youname"<br/>
-                    git config --global user.email "emailname@email.com"<br/>
-                    上面的操作会在C:\Users\Administrator中创建 ~/.gitconfig文件。 我们可以通过：<br/>
-                    git config --global --list 查看上面的相关设置。<br/>
-                    </code>
-                </p>
-                <li>参考文献</li>
-                <p>
-                    <a target="_blank" href="http://git-scm.com/book">http://git-scm.com/book</a>
-                </p>
-            </ol>
-            <footer class="fc">
-                <a href="/contents/gitp/base_git.html#mark">返回</a>
-            </footer>
-        </article>
-    </section>
-    <footer class="fr">
-        <hr/>
+                <li><p><strong>忽略.gitignore同级以及下级的所有test文件</strong></p>
+                <pre><code> test/ </code></pre></li>
+            </ul>
+            <p><strong>如何忽略那些已经加入版本控制的文件？</strong></p>
+            <ul>
+                <li><p><strong>删除所有文件版本控制</strong></p>
+                <pre><code> git rm -r --cached .     </code></pre></li>
+                
+                <li><p><strong>添加</strong></p>
+                <pre><code> git add .</code></pre></li>
+                
+                <li><p><strong>提交</strong></p>
+                <pre><code> git commit -m"fix ignore" </code></pre></li>
+                
+                <li><p><strong>将代码推到远端，即生效</strong></p>
+                <pre><code> git push origin xx分支 </code></pre></li>
+            </ul>
+            <p><strong>如何让空目录被git识别?</strong></p>
+            <ul>
+                <li><p><strong>在git中，空目录文件是不会被识别并提交的，需要在目录下添加keep文件</strong></p>
+                <pre><code> touch .gitkeep</code></pre></li>
+            </ul>
+        <h4>分支的合并</h4>
+
+        <p> 以master分支合到 feature/temp_branch_20140506 分支为例<br/></p>
+
+        <ul>
+            <li><p><strong>分支移动到master</strong></p>
+
+    <pre><code>  git checkout master
+    </code></pre></li>
+            <li><p><strong>更新远程代码到本地</strong></p>
+
+    <pre><code>  git pull
+    </code></pre></li>
+            <li><p><strong>分支移动到 feature/temp_branch_20140506 并更新</strong></p>
+
+    <pre><code>  git checkout feature/temp_branch_20140506
+        <br/>  git pull
+    </code></pre></li>
+            <li><p><strong>把本地master合并到当前分支（如果有冲突，解决冲突）</strong></p>
+
+    <pre><code>  git merge master
+    </code></pre></li>
+            <li><p><strong>推送本地分支代码到远程，完成合并操作</strong></p>
+
+    <pre><code>  git push origin  feature/temp_branch_20140506
+    </code></pre></li>
+            <li><p><strong>配置全局用户名和密码</strong></p>
+
+    <pre><code>  git config --global user.name "youname"
+        <br/>  git config --global user.email "emailname@email.com"
+    </code></pre>
+
+                <p>  /<em>上面的操作会在文件中创建 ~/.gitconfig </em>/    <br/>
+                    /<em>我们可以通过：</em>/</p>
+
+    <pre><code>  git config --global --list 查看上面的相关设置。
+    </code></pre></li>
+
+            <h4>参考文献</h4>
+
+    <li>[gitbook]：<a href="http://git-scm.com/book">http://git-scm.com/book</a>
+        <footer class="fc">
+            <a href="/contents/gitp/base_git.html#mark">返回</a>
+        </footer></li>
+        </ul>
+
+
+        <hr />
     </div>
 </body>
 </html>
