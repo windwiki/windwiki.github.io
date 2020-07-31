@@ -25,25 +25,62 @@
                 <p>
                    劣势：1、代码阅读上不太直观。解决办法有：编译器提醒、编译出错提醒、自行打印检查。
                 </p>
-                <li>实例</li>
+                <li>例子</li>
                 <p>
-                    1）。
+                   <code>
+#include<iostream>
+#include<unordered_map>
+#include<typeinfo>
+int main() {
+    std::unordered_map<std::string, int> m;
+    m.insert(std::pair<std::string, int>("1111",1));
+    std::cout << &(m.at("1111")) << "\n";
+    for(const std::pair<std::string, int>& p: m) {
+        std::cout << &p << "\n";
+        std::cout << &(p.first) << "\n";
+        std::cout << &(p.second) << "\n";
+        std::cout << typeid(p).name() << "\n";
+    }
+}
+                    </code>
                 </p>
                    
 
                 <p>
-                    2）.
+                   输出：<code> 0x1f810b0
+0x7fff748ccaf0
+0x7fff748ccaf0
+0x7fff748ccaf8
+St4pairISsiE</code>
                 </p>
                    
 
                 <p>
-                   3）
+                   <code>#include<iostream>
+#include<unordered_map>
+#include<typeinfo>
+int main() {
+    std::unordered_map<std::string, int> m;
+    m.insert(std::pair<std::string, int>("1111",1));
+    std::cout << &(m.at("1111")) << "\n";
+    for(const std::pair<std::string, int>& p: m) {
+        std::cout << &p << "\n";
+        std::cout << &(p.first) << "\n";
+        std::cout << &(p.second) << "\n";
+        std::cout << typeid(p).name() << "\n";
+    }
+}<code>
                 </p>
                    
 
                 <p>
- 
+ 输出: <code> 0xd960b0
+0xd960a8
+0xd960a8
+0xd960b0
+St4pairIKSsiE<code>
                 </p>
+                    可以看出使用auto可以保持原有类型，引用使用原值，没有产生copy临时值，节省了资源。
             </ol>
             <footer class="fc">
                 <a href="/contents/javap/javapoint.html#mark">返回</a>
