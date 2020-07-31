@@ -29,8 +29,11 @@
                 <p>
                    <code>
 #include<iostream>
+
 #include<unordered_map>
+
 #include<typeinfo>
+
 int main() {
     std::unordered_map<std::string, int> m;
     m.insert(std::pair<std::string, int>("1111",1));
@@ -41,6 +44,7 @@ int main() {
         std::cout << &(p.second) << "\n";
         std::cout << typeid(p).name() << "\n";
     }
+
 }
                     </code>
                 </p>
@@ -48,17 +52,25 @@ int main() {
 
                 <p>
                    输出：<code> 0x1f810b0
+
 0x7fff748ccaf0
+
 0x7fff748ccaf0
+
 0x7fff748ccaf8
-St4pairISsiE</code>
+
+St4pairISsiE
+</code>
                 </p>
                    
 
                 <p>
                    <code>#include<iostream>
+
 #include<unordered_map>
+
 #include<typeinfo>
+
 int main() {
     std::unordered_map<std::string, int> m;
     m.insert(std::pair<std::string, int>("1111",1));
@@ -69,16 +81,24 @@ int main() {
         std::cout << &(p.second) << "\n";
         std::cout << typeid(p).name() << "\n";
     }
-}<code>
+
+}
+<code>
                 </p>
                    
 
                 <p>
  输出: <code> 0xd960b0
+
 0xd960a8
+
 0xd960a8
+
 0xd960b0
-St4pairIKSsiE<code>
+
+St4pairIKSsiE
+<code>
+
                 </p>
                     可以看出使用auto可以保持原有类型，引用使用原值，没有产生copy临时值，节省了资源。
             </ol>
