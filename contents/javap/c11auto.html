@@ -20,66 +20,72 @@
             <ol>
                 <li>说明</li>
                 <p>
-                   优势：1、少写代码。2、降低隐式转换带来的隐藏开销。3、消除跨平台可能带来的bug。
+                   优势：1、少写代码。<br/>2、降低隐式转换带来的隐藏开销。<br/>3、消除跨平台可能带来的bug。<br/>
                 </p>
                 <p>
                    劣势：1、代码阅读上不太直观。解决办法有：编译器提醒、编译出错提醒、自行打印检查。
                 </p>
                 <li>例子</li>
-                <p>
-                   <code>
-#include<iostream>
-#include<unordered_map>
-#include<typeinfo>
-int main() {
-    std::unordered_map<std::string, int> m;
-    m.insert(std::pair<std::string, int>("1111",1));
-    std::cout << &(m.at("1111")) << "\n";
-    for(const std::pair<std::string, int>& p: m) {
-        std::cout << &p << "\n";
-        std::cout << &(p.first) << "\n";
-        std::cout << &(p.second) << "\n";
-        std::cout << typeid(p).name() << "\n";
-    }
-}
-                    </code>
-                </p>
+                <ul>
+                    <li><p><strong>使用显式类型std::pair</strong></p>
+                   <pre><code> 
+                    #include<iostream>
+                    #include<unordered_map>
+                    #include<typeinfo>
+                    int main() {
+                        std::unordered_map<std::string, int> m;
+                        m.insert(std::pair<std::string, int>("1111",1));
+                        std::cout << &(m.at("1111")) << "\n";
+                        for(const std::pair<std::string, int>& p: m) {
+                            std::cout << &p << "\n";
+                            std::cout << &(p.first) << "\n";
+                            std::cout << &(p.second) << "\n";
+                            std::cout << typeid(p).name() << "\n";
+                        }
+                    }
+                    </code></pre></li>
+                </ul>
+                   
+                <ul>
+                <li><p><strong>
+                   输出</strong></p>
+                   <pre><code>  0x1f810b0
+                                0x7fff748ccaf0
+                                0x7fff748ccaf0
+                                0x7fff748ccaf8
+                                St4pairISsiE
+                </code></pre></li>
+                </ul>
+                <ul>
+                <li><p><strong>使用auto</p>
+                   <pre><code>
+                   #include<iostream>
+                    #include<unordered_map>
+                    #include<typeinfo>
+                    int main() {
+                        std::unordered_map<std::string, int> m;
+                        m.insert(std::pair<std::string, int>("1111",1));
+                        std::cout << &(m.at("1111")) << "\n";
+                        for(const std::pair<std::string, int>& p: m) {
+                            std::cout << &p << "\n";
+                            std::cout << &(p.first) << "\n";
+                            std::cout << &(p.second) << "\n";
+                            std::cout << typeid(p).name() << "\n";
+                        }
+                    }  
+                    </code></pre></li>
+                </ul>
                    
 
-                <p>
-                   输出：<code> 0x1f810b0
-0x7fff748ccaf0
-0x7fff748ccaf0
-0x7fff748ccaf8
-St4pairISsiE</code>
-                </p>
-                   
-
-                <p>
-                   <code>#include<iostream>
-#include<unordered_map>
-#include<typeinfo>
-int main() {
-    std::unordered_map<std::string, int> m;
-    m.insert(std::pair<std::string, int>("1111",1));
-    std::cout << &(m.at("1111")) << "\n";
-    for(const std::pair<std::string, int>& p: m) {
-        std::cout << &p << "\n";
-        std::cout << &(p.first) << "\n";
-        std::cout << &(p.second) << "\n";
-        std::cout << typeid(p).name() << "\n";
-    }
-}<code>
-                </p>
-                   
-
-                <p>
- 输出: <code> 0xd960b0
-0xd960a8
-0xd960a8
-0xd960b0
-St4pairIKSsiE<code>
-                </p>
+                <ul>
+                <li><p><strong>输出</p>
+                            <pre><code> 0xd960b0
+                            0xd960a8
+                            0xd960a8
+                            0xd960b0
+                            St4pairIKSsiE<code>
+                            </code></pre></li>
+                </ul>
                     可以看出使用auto可以保持原有类型，引用使用原值，没有产生copy临时值，节省了资源。
             </ol>
             <footer class="fc">
